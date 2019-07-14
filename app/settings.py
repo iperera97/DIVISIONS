@@ -118,3 +118,6 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "PROENV_STATICS")
+
+
+AUTH_USER_MODEL = "user.User"
