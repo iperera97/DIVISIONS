@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+
+    {% block styles %}
+    {% include "admin/inc/styles.html" %}
+
+    <link href="{% static 'user/login.css' %}" rel="stylesheet" />
+
+    {% endblock %}
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-3"></div>
+            <div class="col-sm-12 col-md-6">
+                <div class="panel" id="loginpanel">
+                    <div class="panel-body">
+                        <form id="loginform" action="" method="post" autocomplete="off">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <h2 class="text-center">User login</h2>
+                            </div>
+                            <div class="form-group">
+                                {% for error in form.non_field_errors  %}
+                                    <div class="alert alert-danger" role="alert">
+                                        {{error}}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="form-group">
+                                {% for error in form.username.errors %}
+                                    <div class="alert alert-danger" role="alert">
+                                        {{error}}
+                                    </div>
+                                {% endfor %}
+                                <input type="text" placeholder="Username" class="form-control" name="username" required
+                                    id="id_username">
+                            </div>
+                            <div class="form-group">
+                                {% for error in form.password.errors %}
+                                    <div class="alert alert-danger" role="alert">
+                                        {{error}}
+                                    </div>
+                                {% endfor %}
+                                <input type="password" placeholder="Password" class="form-control" name="password"
+                                    required id="id_password">
+                            </div>
+                            <div class="form-group">
+                                <input type="hidden" name="next" value="/dashboard" />
+                                <input type="submit" id="submit" class="btn btn-lg btn-primary" value="Login" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3"></div>
+        </div>
+    </div>
+    </div>
+
+    {% block scripts %}
+    {% include "admin/inc/scripts.html" %}
+    {% endblock  %}
+</body>
+
+</html>

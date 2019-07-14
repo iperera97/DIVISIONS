@@ -7,7 +7,7 @@ class LoginUser(View):
 
     def get(self, request, *args, **kwargs):
 
-        return render(request, 'admin/base.html')
+        return render(request, 'user/login.html')
 
 
 class CreateUser(View):

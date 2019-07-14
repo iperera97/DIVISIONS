@@ -83,7 +83,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     # METHODS
     def __str__(self):
 
-        return "(#{}) {}".format(self.pk, self.firstName)
+        return "(#{}) {}".format(self.pk, self.username)
 
     @property
     def is_admin(self):
