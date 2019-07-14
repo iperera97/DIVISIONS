@@ -23,6 +23,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # custom apps
+    "user"
 ]
 
 INTERNAL_IPS = "127.0.0.1"
