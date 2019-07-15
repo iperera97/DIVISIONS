@@ -56,7 +56,7 @@
                                     required id="id_password">
                             </div>
                             <div class="form-group">
-                                <input type="hidden" name="next" value="/dashboard" />
+                                <input type="hidden" name="next" value="{% url 'dashboard:home' %}" />
                                 <input type="submit" id="submit" class="btn btn-lg btn-primary" value="Login" />
                             </div>
                         </form>
