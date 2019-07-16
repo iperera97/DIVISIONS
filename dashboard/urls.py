@@ -4,5 +4,5 @@ from .views import Dashboard
 app_name = "dashboard"
 
 urlpatterns = [
-    re_path("", Dashboard.as_view(), name="home")
+    re_path(r"^$", Dashboard.as_view(), name="home")
 ]

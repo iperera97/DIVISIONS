@@ -26,7 +26,8 @@ INSTALLED_APPS = [
 
     # custom apps
     "user",
-    "dashboard"
+    "dashboard",
+    "Province"
 ]
 
 INTERNAL_IPS = "127.0.0.1"
@@ -120,5 +121,10 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, "PROENV_STATICS")
 
+# AUTH
 
 AUTH_USER_MODEL = "user.User"
+
+LOGIN_URL = "/adminpanel/auth/login/"
+
+LOGIN_REDIRECT_URL = "/adminpanel/dashboard/"
