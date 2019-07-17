@@ -1031,3 +1031,9 @@ p.back-link {
   margin-bottom: 20px;
   font-size: 12px;
   text-transform: uppercase; }
+
+
+/* custom */
+.fw {
+  width: 100% !important;
+}

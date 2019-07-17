@@ -1,0 +1,23 @@
+{% extends "admin/base.html" %}
+
+{% block MainContainer %}
+
+    <div class="container fw">
+        <div class="row">
+            <div class="col-s12">
+                {% include "admin/components/messages.html" %}
+            </div>
+        </div>      
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="page-actions">
+                    <button class="btn btn-info">
+                        <a style="color: #fff" href="{% url 'provinces:create' %}">Add new Province</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock  %}

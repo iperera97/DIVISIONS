@@ -128,3 +128,8 @@ AUTH_USER_MODEL = "user.User"
 LOGIN_URL = "/adminpanel/auth/login/"
 
 LOGIN_REDIRECT_URL = "/adminpanel/dashboard/"
+
+
+# media
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
