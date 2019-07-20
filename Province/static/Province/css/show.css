@@ -1,0 +1,16 @@
+#page-actions {
+    margin: 10px 0 20px 0;
+}
+
+#page-actions button {
+    float: right;
+}
+
+#page-actions button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#province_table tr {
+    cursor: pointer;
+}

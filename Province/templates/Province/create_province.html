@@ -1,0 +1,91 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block styles %}
+    {{ block.super }}
+    <link href="{% static 'Province/create.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+
+{% block MainContainer %}
+    <div class="container fw">
+        <div class="row">
+            <div class="col-s12">
+                <div class="panel panel-default">
+                    <form method="POST" id="province-form" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-s12">
+                                <div class="form-group" style="padding: 15px">
+                                    <label for="{{ form.introduction.id_for_label }}">
+                                        Introduction
+                                    </label>
+                                    {{ form.introduction }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-4">
+                                <div class="form-group">
+                                    <label for="{{ form.sinhalaName.id_for_label }}">
+                                        Sinhala Name
+                                    </label>
+                                    {{ form.sinhalaName }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-4">
+                                <div class="form-group">
+                                    <label for="{{ form.englishName.id_for_label }}">
+                                        English Name
+                                    </label>
+                                    {{ form.englishName }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-4">
+                                <div class="form-group">
+                                    <label for="{{ form.tamilName.id_for_label }}">
+                                        Tamil Name
+                                    </label>
+                                    {{ form.tamilName }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-4">
+                                <div class="form-group">
+                                    <label for="{{ form.area.id_for_label }}">
+                                        Area
+                                    </label>
+                                    {{ form.area }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-8">
+                                <div class="form-group">
+                                    <label for="{{ form.mapUrl.id_for_label }}">
+                                        Google Map Url
+                                    </label>
+                                    {{ form.mapUrl }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-4">
+                                <div class="form-group">
+                                    <label for="{{ form.featureImage.id_for_label }}">
+                                        Feature Image
+                                    </label>
+                                    {{ form.featureImage }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-12">
+                                <div class="form-group">
+                                    <input 
+                                        style="float: right" 
+                                        class="btn btn-primary" 
+                                        type="submit" 
+                                        value="Create a new Province" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock  %}

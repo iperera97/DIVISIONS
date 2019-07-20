@@ -3,13 +3,17 @@
 
 {% block styles %}
     {{ block.super }}
-    <link href="{% static 'Province/create.css' %}" rel="stylesheet">
+    <link href="{% static 'Province/css/create.css' %}" rel="stylesheet">
 {% endblock %}
-
 
 
 {% block MainContainer %}
     <div class="container fw">
+        <div class="row">
+            <div class="col-s12">
+                {% include "admin/components/messages.html" %}
+            </div>
+        </div> 
         <div class="row">
             <div class="col-s12">
                 <div class="panel panel-default">
@@ -19,7 +23,7 @@
                             <div class="col-s12">
                                 <div class="form-group" style="padding: 15px">
                                     <label for="{{ form.introduction.id_for_label }}">
-                                        {{form.introduction.label | upper}}
+                                        Introduction
                                     </label>
                                     {{ form.introduction }}
                                 </div>
@@ -27,7 +31,7 @@
                             <div class="col-s12 col-md-4">
                                 <div class="form-group">
                                     <label for="{{ form.sinhalaName.id_for_label }}">
-                                        {{form.sinhalaName.label | upper}}
+                                        Sinhala Name
                                     </label>
                                     {{ form.sinhalaName }}
                                 </div>
@@ -35,7 +39,7 @@
                             <div class="col-s12 col-md-4">
                                 <div class="form-group">
                                     <label for="{{ form.englishName.id_for_label }}">
-                                        {{form.englishName.label | upper}}
+                                        English Name
                                     </label>
                                     {{ form.englishName }}
                                 </div>
@@ -43,7 +47,7 @@
                             <div class="col-s12 col-md-4">
                                 <div class="form-group">
                                     <label for="{{ form.tamilName.id_for_label }}">
-                                        {{form.tamilName.label | upper}}
+                                        Tamil Name
                                     </label>
                                     {{ form.tamilName }}
                                 </div>
@@ -51,7 +55,7 @@
                             <div class="col-s12 col-md-4">
                                 <div class="form-group">
                                     <label for="{{ form.area.id_for_label }}">
-                                        {{form.area.label | upper}}
+                                        Area
                                     </label>
                                     {{ form.area }}
                                 </div>
@@ -59,22 +63,35 @@
                             <div class="col-s12 col-md-8">
                                 <div class="form-group">
                                     <label for="{{ form.mapUrl.id_for_label }}">
-                                        {{form.mapUrl.label | upper}}
+                                        Google Map Url
                                     </label>
                                     {{ form.mapUrl }}
                                 </div>
                             </div>
-                            <div class="col-s12 col-md-4">
+                            <div class="col-s12 col-md-12" id="feature-image">
                                 <div class="form-group">
                                     <label for="{{ form.featureImage.id_for_label }}">
-                                        {{form.featureImage.label | upper}}
+                                        Feature Image
                                     </label>
-                                    {{ form.featureImage }}
-                                </div>
+                                    <span class="visibility: hidden">{{imageURL}}</span>
+                                    <input 
+                                        type="file" 
+                                        name="featureImage"
+                                         accept="image/*" 
+                                         class="form-control" 
+                                         id="id_featureImage">
+                                </div>                                
+                            </div>
+                            <div class="col-s12 col-md-12">
+                                <div id="show_image"></div>  
                             </div>
                             <div class="col-s12 col-md-12">
                                 <div class="form-group">
-                                    <input class="btn btn-lg btn-primary" type="submit" value="Create" />
+                                    <input 
+                                        style="float: right" 
+                                        class="btn btn-primary" 
+                                        type="submit" 
+                                        value="Update Province" />
                                 </div>
                             </div>
                         </div>
@@ -85,3 +102,8 @@
     </div>
 
 {% endblock  %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static 'Province/js/edit.js' %}"></script>
+{% endblock %}

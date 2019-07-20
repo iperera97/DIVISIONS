@@ -1,0 +1,61 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block styles %}
+    {{ block.super }}
+    <link href="{% static 'Province/css/show.css' %}" rel="stylesheet" />
+{% endblock  %}
+
+
+{% block MainContainer %}
+
+    <div class="container fw">
+        <div class="row">
+            <div class="col-s12">
+                {% include "admin/components/messages.html" %}
+            </div>
+        </div>      
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="page-actions">
+                    <button class="btn btn-primary">
+                        <a href="{% url 'provinces:create' %}">Add new Province</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <table class="table table-striped" id="province_table">
+                        <tr>
+                            <th>#</th>
+                            <th>SI-Name</th>
+                            <th>EI-Name</th>
+                            <th>TI-Name</th>
+                            <th>Actions</th>
+                        </tr>
+                        {% for province in object_list %}
+                            <tr>
+                                <td>{{province.id}}</td>
+                                <td><a>{{province.sinhalaName}}</td>
+                                <td>{{province.englishName}}</td>
+                                <td>{{province.tamilName}}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-success">
+                                        <a href="{% url 'provinces:edit' province.id %}">E</a>
+                                    </button>
+                                    <button class="btn btn-sm btn-info">V</button>
+                                    <button class="btn btn-sm btn-danger">D</button>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock  %}
