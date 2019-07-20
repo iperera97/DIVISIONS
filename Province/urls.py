@@ -15,4 +15,8 @@ urlpatterns = [
     re_path(r"^create/",
             views.Create.as_view(),
             name="create"),
+
+    re_path(r"^remove/(?P<pk>\d+)/",
+            views.RemoveProvince.as_view(),
+            name="remove"),
 ]

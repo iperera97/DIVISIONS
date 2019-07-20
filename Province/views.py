@@ -1,11 +1,12 @@
-from django.shortcuts import render, reverse
+from django.shortcuts import render, reverse, get_object_or_404
 from django.views import View
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Province
-from django.views.generic import CreateView, ListView, UpdateView
+from django.views.generic import CreateView, ListView, UpdateView, DeleteView
 from .forms import ProvinceForm
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib import messages
 
 
 class Create(LoginRequiredMixin, SuccessMessageMixin, CreateView):
@@ -64,5 +65,24 @@ class EditProvinces(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     def get_object(self):
 
         pk = self.kwargs.get("pk")
-        self.instance = Province.objects.get(pk=pk)
+        self.instance = get_object_or_404(Province, pk=PK)
         return self.instance
+
+
+class RemoveProvince(LoginRequiredMixin, View):
+
+    def get(self, request, *args, **kwargs):
+
+        PK = kwargs.get("pk")
+        province = get_object_or_404(Province, pk=PK)
+        response = province.delete()
+
+        # if delete count is 1 or more => success
+        if response[0] >= 1:
+            messages.add_message(
+                request, messages.SUCCESS, '{} province removed'.format(province.englishName))
+        else:
+            messages.add_message(
+                request, messages.ERROR, '{} province not removed'.format(province.englishName))
+
+        return redirect("provinces:home")

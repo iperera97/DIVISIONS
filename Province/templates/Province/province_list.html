@@ -43,12 +43,14 @@
                                 <td><a>{{province.sinhalaName}}</td>
                                 <td>{{province.englishName}}</td>
                                 <td>{{province.tamilName}}</td>
-                                <td>
+                                <td id="actions">
                                     <button class="btn btn-sm btn-success">
                                         <a href="{% url 'provinces:edit' province.id %}">E</a>
                                     </button>
                                     <button class="btn btn-sm btn-info">V</button>
-                                    <button class="btn btn-sm btn-danger">D</button>
+                                    <button class="btn btn-sm btn-danger delete">
+                                        <a href="{% url 'provinces:remove' province.id %}">D</a>
+                                    </button>
                                 </td>
                             </tr>
                         {% endfor %}
@@ -59,3 +61,10 @@
     </div>
 
 {% endblock  %}
+
+
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static 'Province/js/home.js' %}"></script>
+{% endblock %}

@@ -3,9 +3,6 @@ var featureImageBox = $("#feature-image");
 var featureImageURL = featureImageBox.find("span").text()
 var showImageBox = $("#show_image")
 
-
-console.log(featureImageURL)
-
 // has url)
 if (featureImageURL) {
 

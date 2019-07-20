@@ -14,3 +14,7 @@
 #province_table tr {
     cursor: pointer;
 }
+
+#province_table #actions a {
+    color: #fff;
+}
