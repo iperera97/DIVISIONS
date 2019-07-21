@@ -1037,3 +1037,8 @@ p.back-link {
 .fw {
   width: 100% !important;
 }
+
+.alert {
+  margin-bottom: 8px !important;
+  padding: 8px !important;
+}

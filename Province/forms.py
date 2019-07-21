@@ -13,7 +13,7 @@ class ProvinceForm(forms.ModelForm):
 
     introduction = forms.CharField(
         widget=forms.Textarea(
-            attrs={'class': "form-control", "rows": 6}
+            attrs={'class': "form-control", "rows": 12}
         )
     )
 

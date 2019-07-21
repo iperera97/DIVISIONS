@@ -64,7 +64,7 @@ class EditProvinces(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 
     def get_object(self):
 
-        pk = self.kwargs.get("pk")
+        PK = self.kwargs.get("pk")
         self.instance = get_object_or_404(Province, pk=PK)
         return self.instance
 

@@ -3,21 +3,31 @@
 
 {% block styles %}
     {{ block.super }}
-    <link href="{% static 'Province/create.css' %}" rel="stylesheet">
+    <link href="{% static 'Province/css/create.css' %}" rel="stylesheet">
 {% endblock %}
-
-
 
 {% block MainContainer %}
     <div class="container fw">
         <div class="row">
             <div class="col-s12">
+                {% for nonErr in form.non_field_errors  %}
+                    <div class="alert alert-error">
+                        {{nonErr}}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-s12">
                 <div class="panel panel-default">
-                    <form method="POST" id="province-form" enctype="multipart/form-data">
+                    <form autocomplete="off" method="POST" id="province-form" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="row">
                             <div class="col-s12">
                                 <div class="form-group" style="padding: 15px">
+                                    {% for error in form.introduction.errors %}
+                                        <div class="alert alert-danger">{{error}}</div>
+                                    {% endfor %}
                                     <label for="{{ form.introduction.id_for_label }}">
                                         Introduction
                                     </label>
@@ -26,6 +36,9 @@
                             </div>
                             <div class="col-s12 col-md-4">
                                 <div class="form-group">
+                                    {% for error in form.sinhalaName.errors %}
+                                        <div class="alert alert-danger">{{error}}</div>
+                                    {% endfor %}
                                     <label for="{{ form.sinhalaName.id_for_label }}">
                                         Sinhala Name
                                     </label>
@@ -34,6 +47,9 @@
                             </div>
                             <div class="col-s12 col-md-4">
                                 <div class="form-group">
+                                    {% for error in form.englishName.errors %}
+                                        <div class="alert alert-danger">{{error}}</div>
+                                    {% endfor %}
                                     <label for="{{ form.englishName.id_for_label }}">
                                         English Name
                                     </label>
@@ -42,6 +58,9 @@
                             </div>
                             <div class="col-s12 col-md-4">
                                 <div class="form-group">
+                                    {% for error in form.tamilName.errors %}
+                                        <div class="alert alert-danger">{{error}}</div>
+                                    {% endfor %}
                                     <label for="{{ form.tamilName.id_for_label }}">
                                         Tamil Name
                                     </label>
@@ -50,6 +69,9 @@
                             </div>
                             <div class="col-s12 col-md-4">
                                 <div class="form-group">
+                                    {% for error in form.area.errors %}
+                                        <div class="alert alert-danger">{{error}}</div>
+                                    {% endfor %}
                                     <label for="{{ form.area.id_for_label }}">
                                         Area
                                     </label>
@@ -58,6 +80,9 @@
                             </div>
                             <div class="col-s12 col-md-8">
                                 <div class="form-group">
+                                    {% for error in form.mapUrl.errors %}
+                                        <div class="alert alert-danger">{{error}}</div>
+                                    {% endfor %}
                                     <label for="{{ form.mapUrl.id_for_label }}">
                                         Google Map Url
                                     </label>
@@ -66,6 +91,9 @@
                             </div>
                             <div class="col-s12 col-md-4">
                                 <div class="form-group">
+                                    {% for error in form.featureImage.errors %}
+                                        <div class="alert alert-danger">{{error}}</div>
+                                    {% endfor %}
                                     <label for="{{ form.featureImage.id_for_label }}">
                                         Feature Image
                                     </label>
