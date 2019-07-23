@@ -1,5 +1,6 @@
 {% extends "admin/base.html" %}
 {% load static %}
+{% load showMsg %}
 
 {% block styles %}
     {{ block.super }}
@@ -22,19 +23,15 @@
                         <div class="row">
                             <div class="col-s12">
                                 <div class="form-group" style="padding: 15px">
-                                    {% for error in form.introduction.errors %}
-                                        <div class="alert alert-danger">{{error}}</div>
-                                    {% endfor %}
+                                    {% showErrors form.introduction.errors %}
                                     <label for="{{ form.introduction.id_for_label }}">
                                         Introduction
                                     </label>
                                     {{ form.introduction }}
                                 </div>
                             </div>
-                            <div class="col-s12 col-md-4">
-                                {% for error in form.sinhalaName.errors %}
-                                    <div class="alert alert-danger">{{error}}</div>
-                                {% endfor %}
+                            <div class="col-s12 col-md-6">
+                                {% showErrors form.sinhalaName.errors %}
                                 <div class="form-group">
                                     <label for="{{ form.sinhalaName.id_for_label }}">
                                         Sinhala Name
@@ -42,10 +39,8 @@
                                     {{ form.sinhalaName }}
                                 </div>
                             </div>
-                            <div class="col-s12 col-md-4">
-                                {% for error in form.englishName.errors %}
-                                    <div class="alert alert-danger">{{error}}</div>
-                                {% endfor %}
+                            <div class="col-s12 col-md-6">
+                                {% showErrors form.englishName.errors %}
                                 <div class="form-group">
                                     <label for="{{ form.englishName.id_for_label }}">
                                         English Name
@@ -53,10 +48,8 @@
                                     {{ form.englishName }}
                                 </div>
                             </div>
-                            <div class="col-s12 col-md-4">
-                                {% for error in form.tamilName.errors %}
-                                    <div class="alert alert-danger">{{error}}</div>
-                                {% endfor %}
+                            <div class="col-s12 col-md-6">
+                                {% showErrors form.tamilName.errors %}
                                 <div class="form-group">
                                     <label for="{{ form.tamilName.id_for_label }}">
                                         Tamil Name
@@ -64,10 +57,8 @@
                                     {{ form.tamilName }}
                                 </div>
                             </div>
-                            <div class="col-s12 col-md-4">
-                                {% for error in form.area.errors %}
-                                    <div class="alert alert-danger">{{error}}</div>
-                                {% endfor %}
+                            <div class="col-s12 col-md-6">
+                                {% showErrors form.area.errors %}
                                 <div class="form-group">
                                     <label for="{{ form.area.id_for_label }}">
                                         Area
@@ -75,10 +66,8 @@
                                     {{ form.area }}
                                 </div>
                             </div>
-                            <div class="col-s12 col-md-8">
-                                {% for error in form.mapUrl.errors %}
-                                    <div class="alert alert-danger">{{error}}</div>
-                                {% endfor %}
+                            <div class="col-s12 col-md-12">
+                                {% showErrors form.mapUrl.errors %}
                                 <div class="form-group">
                                     <label for="{{ form.mapUrl.id_for_label }}">
                                         Google Map Url
@@ -87,9 +76,7 @@
                                 </div>
                             </div>
                             <div class="col-s12 col-md-12" id="feature-image">
-                                {% for error in form.featureImage.errors %}
-                                    <div class="alert alert-danger">{{error}}</div>
-                                {% endfor %}
+                                {% showErrors form.featureImage.errors %}
                                 <div class="form-group">
                                     <label for="{{ form.featureImage.id_for_label }}">
                                         Feature Image

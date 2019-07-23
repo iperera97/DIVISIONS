@@ -13,6 +13,7 @@ pylint = "*"
 python-dotenv = "*"
 mysqlclient = "*"
 pillow = "*"
+coverage = "*"
 
 [requires]
 python_version = "3.6"

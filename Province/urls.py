@@ -13,7 +13,7 @@ urlpatterns = [
             name="edit"),
 
     re_path(r"^create/",
-            views.Create.as_view(),
+            views.CreateProvince.as_view(),
             name="create"),
 
     re_path(r"^remove/(?P<pk>\d+)/",
