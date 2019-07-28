@@ -9,7 +9,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 
 
-class CreateProvince(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+class CreateProvince(SuccessMessageMixin, CreateView):
 
     model = Province
     form_class = ProvinceForm
@@ -80,9 +80,16 @@ class RemoveProvince(LoginRequiredMixin, View):
         # if delete count is 1 or more => success
         if response[0] >= 1:
             messages.add_message(
-                request, messages.SUCCESS, '{} province removed'.format(province.englishName))
+                request,
+                messages.SUCCESS, '{} province removed'.format(
+                    province.englishName)
+            )
+
         else:
             messages.add_message(
-                request, messages.ERROR, '{} province not removed'.format(province.englishName))
+                request,
+                messages.ERROR, '{} province not removed'.format(
+                    province.englishName)
+            )
 
         return redirect("provinces:home")
