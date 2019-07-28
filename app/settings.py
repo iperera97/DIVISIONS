@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     "user",
     "dashboard",
     "Province",
+    "district",
     "debug_toolbar"
 ]
 
