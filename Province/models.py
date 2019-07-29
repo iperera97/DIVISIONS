@@ -12,7 +12,7 @@ class Province(models.Model):
     area = models.CharField(max_length=255, blank=True, null=True)
     featureImage = models.ImageField(
         upload_to='images/provinces/', blank=True, null=True)
-    mapUrl = models.CharField(
+    mapUrl = models.URLField(
         max_length=255, unique=True, blank=True, null=True)
 
     def __str__(self):

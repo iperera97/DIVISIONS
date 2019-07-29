@@ -10,6 +10,7 @@ urlpatterns = [
     re_path(r'^adminpanel/auth/', include("user.urls")),
     re_path(r'^adminpanel/dashboard/', include("dashboard.urls")),
     re_path(r'^adminpanel/provinces/', include("Province.urls")),
+    re_path(r'^adminpanel/district/', include("district.urls")),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
