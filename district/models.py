@@ -14,7 +14,7 @@ class District(models.Model):
     tamilName = models.CharField(max_length=255, unique=True)
     area = models.CharField(max_length=255, blank=True, null=True)
     featureImage = models.ImageField(
-        upload_to='images/provinces/',
+        upload_to='images/district/',
         blank=True,
         null=True
     )

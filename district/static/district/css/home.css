@@ -1,0 +1,11 @@
+#district_table a {
+    color: #fff !important;
+}
+
+#page-actions {
+    margin: 10px 0 20px 0;
+}
+
+#page-actions button {
+    float: right;
+}

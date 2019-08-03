@@ -2,14 +2,19 @@
 {% load static %}
 {% load showMsg %}
 
+
+{% block styles %}
+    {{ block.super }}
+    <link href="{% static 'district/css/home.css' %}" rel="stylesheet" />
+{% endblock  %}
+
+
 {% block MainContainer %}
 
 <div class="container fw">
     <div class="row">
-        <div class="col-s12">
-            {% include "admin/components/messages.html" %}
-        </div>
-    </div>      
+        {% include "admin/components/messages.html" %}
+    </div>
 
     <div class="row">
         <div class="col-sm-12">
@@ -20,7 +25,78 @@
             </div>
         </div>
     </div>
+
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <table class="table table-striped" id="district_table">
+                    <tr>
+                        <th>#</th>
+                        <th>Province</th>
+                        <th>SI-Name</th>
+                        <th>EI-Name</th>
+                        <th>Actions</th>
+                    </tr>
+
+                    {% if districtList %}
+                        {% for district in districtList %}
+                        <tr>
+                            <td class='dis_pk'>{{district.pk}}</td>
+                            <td class='pro_eng'>{{district.province__englishName}}</td>
+                            <td class='dis_si'>{{district.sinhalaName}}</td>
+                            <td class='dis_eng'>{{district.englishName}}</td>
+                            <td id="actions">
+                                <button class="btn btn-sm btn-success">
+                                    <a href="{% url 'district:edit' district.pk %}">E</a>
+                                </button>
+                                <button class="btn btn-sm btn-danger delete">
+                                    <a href="{% url 'district:delete' district.pk %}">D</a>
+                                </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="5" style="text-align: center">Please Create new District</td>
+                        </tr>
+                    {% endif %}                    
+                </table>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            {% if districtList.has_other_pages %}
+                        
+            <div class="pagination">
+                <span class="step-links">
+                    {% if districtList.has_previous %}
+                        <a href="?page=1">&laquo; first</a>
+                        <a href="?page={{ districtList.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                    <span class="current">
+                        Page {{ districtList.number }} of {{ districtList.paginator.num_pages }}.
+                    </span>
+
+                    {% if districtList.has_next %}
+                        <a href="?page={{ districtList.next_page_number }}">next</a>
+                        <a href="?page={{ districtList.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+
+
+            {% endif %}
+        </div>
+
+    </div>
 </div>
 
 
+{% endblock %}
+
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static 'district/js/home.js' %}"></script>
 {% endblock %}

@@ -14,15 +14,28 @@ $(window).on('resize', function () {
 	if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
 })
 
-$(document).on('click', '.panel-heading span.clickable', function (e) {
-	var $this = $(this);
-	if (!$this.hasClass('panel-collapsed')) {
-		$this.parents('.panel').find('.panel-body').slideUp();
-		$this.addClass('panel-collapsed');
-		$this.find('em').removeClass('fa-toggle-up').addClass('fa-toggle-down');
-	} else {
-		$this.parents('.panel').find('.panel-body').slideDown();
-		$this.removeClass('panel-collapsed');
-		$this.find('em').removeClass('fa-toggle-down').addClass('fa-toggle-up');
-	}
+
+
+
+// init variables
+const NAVIGATION_LIST = $("#sidebar-collapse .nav li");
+const CURRENT_ENDPOINT = location.pathname
+
+// remove active class in all list elements
+NAVIGATION_LIST.removeClass("active")
+
+Array.from(NAVIGATION_LIST).forEach(function (ele) {
+
+	// create key n value
+	let listEle = $(ele)
+	let endpointVALUE = listEle.find('a').attr('href')
+
+	// add active class
+	if (CURRENT_ENDPOINT == endpointVALUE) listEle.addClass('active')
+
 })
+
+
+
+
+

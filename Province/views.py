@@ -9,7 +9,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 
 
-class CreateProvince(SuccessMessageMixin, CreateView):
+class CreateProvince(LoginRequiredMixin, SuccessMessageMixin, CreateView):
 
     model = Province
     form_class = ProvinceForm

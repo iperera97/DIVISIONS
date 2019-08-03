@@ -1042,3 +1042,13 @@ p.back-link {
   margin-bottom: 8px !important;
   padding: 8px !important;
 }
+
+.pagination {
+  width: 100% !important;
+  text-align: center;
+  font-size: 16px;
+}
+
+#sidebar-collapse .nav li {
+  border: 2px solid #fff;
+}
