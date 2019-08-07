@@ -1,5 +1,6 @@
 from django.db import models
 from Province.models import Province
+from django.urls import reverse
 
 
 class District(models.Model):
@@ -27,3 +28,6 @@ class District(models.Model):
 
     def __str__(self):
         return "({}) {}".format(self.pk, self.englishName)
+
+    def get_absolute_url(self):
+        return reverse("district:edit", kwargs={"pk": self.pk})

@@ -13,12 +13,12 @@ class ViewDistrct(LoginRequiredMixin, View):
     def get(self, request):
 
         parseData = {
-            'title': 'District'
+            'title': 'Districts'
         }
 
         pageNumber = request.GET.get("page", 1)
 
-        querySet = District.objects.all().select_related('province')
+        querySet = District.objects.all().select_related('province').order_by('pk')
         querySet = querySet.values(
             'pk',
             'sinhalaName',
