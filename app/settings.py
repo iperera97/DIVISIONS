@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     "dashboard",
     "Province",
     "district",
+    "city"
 
     # add environment apps
 ] + [app.strip() for app in os.getenv("APPLICATIONS").split(",") if app != ""]
