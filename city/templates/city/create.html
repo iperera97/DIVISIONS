@@ -1,0 +1,127 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% load showMsg %}
+
+{% block styles %}
+    {{ block.super }}
+    <link href="{% static 'city/css/create.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block MainContainer %}
+    <div class="container fw">
+
+        <div class="row">
+            <div class="col-s12">
+                {% include "admin/components/messages.html" %}
+            </div>
+        </div>      
+
+        <div class="row">
+            <div class="col-s12">
+                {% showErrors form.non_field_errors  %}
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-s12">
+                <div class="panel panel-default">
+                    <form autocomplete="off" method="POST" id="city-form" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-s12">
+                                <div class="form-group" style="padding: 15px">
+                                    {% showErrors form.introduction.errors %}
+                                    <label for="{{ form.introduction.id_for_label }}">
+                                        Introduction
+                                    </label>
+                                    {{ form.introduction }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-4">
+                                <div class="form-group">
+                                    {% showErrors form.province.errors %}
+                                    <label for="{{ form.district.id_for_label }}">
+                                        District
+                                    </label>
+                                    {{form.district}}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-4">
+                                <div class="form-group">
+                                    {% showErrors form.sinhalaName.errors %}
+                                    <label for="{{ form.sinhalaName.id_for_label }}">
+                                        Sinhala Name
+                                    </label>
+                                    {{ form.sinhalaName }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-4">
+                                <div class="form-group">
+                                    {% showErrors form.englishName.errors %}
+                                    <label for="{{ form.englishName.id_for_label }}">
+                                        English Name
+                                    </label>
+                                    {{ form.englishName }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-4">
+                                <div class="form-group">
+                                    {% showErrors form.tamilName.errors %}
+                                    <label for="{{ form.tamilName.id_for_label }}">
+                                        Tamil Name
+                                    </label>
+                                    {{ form.tamilName }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-4">
+                                <div class="form-group">
+                                    {% showErrors form.area.errors %}
+                                    <label for="{{ form.area.id_for_label }}">
+                                        Area
+                                    </label>
+                                    {{ form.area }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-4">
+                                <div class="form-group">
+                                    {% showErrors form.featureImage.errors %}
+                                    <label for="{{ form.featureImage.id_for_label }}">
+                                        Feature Image
+                                    </label>
+                                    {{ form.featureImage }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-6">
+                                <div class="form-group">
+                                    {% showErrors form.mapUrl.errors %}
+                                    <label for="{{ form.mapUrl.id_for_label }}">
+                                        Google Map Url
+                                    </label>
+                                    {{ form.mapUrl }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-6">
+                                <div class="form-group">
+                                    <input 
+                                        id="submit"
+                                        style="float: right" 
+                                        class="btn btn-primary" 
+                                        type="submit" 
+                                        value="Create a new City" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock  %}
+
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static 'city/js/create.js' %}"></script>
+{% endblock %}

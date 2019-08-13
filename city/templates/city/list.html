@@ -1,0 +1,38 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% load showMsg %}
+
+
+{% block styles %}
+    {{ block.super }}
+    <link href="{% static 'city/css/home.css' %}" rel="stylesheet" />
+{% endblock  %}
+
+
+{% block MainContainer %}
+
+<div class="container fw">
+    <div class="row">
+        {% include "admin/components/messages.html" %}
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="page-actions">
+                <button class="btn btn-primary">
+                    <a href="{% url 'city:create' %}" style="color: #fff">Add new City</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static 'city/js/home.js' %}"></script>
+{% endblock %}
