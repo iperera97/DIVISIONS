@@ -26,6 +26,48 @@
         </div>
     </div>
 
+        <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <table class="table table-striped" id="city_table">
+                    <tr>
+                        <th>#</th>
+                        <th>District</th>
+                        <th>SI-Name</th>
+                        <th>EI-Name</th>
+                        <th>Actions</th>
+                    </tr>
+
+                    {% if object_list %}
+                        {% for city in object_list %}
+                        <tr>
+                            <td class='dis_pk'>{{city.pk}}</td>
+                            <td class='pro_eng'>{{city.district__englishName}}</td>
+                            <td class='dis_si'>{{city.sinhalaName}}</td>
+                            <td class='dis_eng'>{{city.englishName}}</td>
+                            <td id="actions">
+                                <button class="btn btn-sm btn-success">
+                                    <a href="{% url 'city:edit' city.pk %}">E</a>
+                                </button>
+                                <button class="btn btn-sm btn-danger delete">
+                                    <a href="">D</a>
+                                </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="5" style="text-align: center">Please Create new City</td>
+                        </tr>
+                    {% endif %}                    
+                </table>
+            </div>
+        </div>
+
+        
+
+    </div>
+
 </div>
 
 
