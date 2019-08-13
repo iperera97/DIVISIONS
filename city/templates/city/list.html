@@ -41,16 +41,16 @@
                     {% if object_list %}
                         {% for city in object_list %}
                         <tr>
-                            <td class='dis_pk'>{{city.pk}}</td>
-                            <td class='pro_eng'>{{city.district__englishName}}</td>
-                            <td class='dis_si'>{{city.sinhalaName}}</td>
-                            <td class='dis_eng'>{{city.englishName}}</td>
+                            <td class='city_pk'>{{city.pk}}</td>
+                            <td class='dis_eng'>{{city.district__englishName}}</td>
+                            <td class='city_si'>{{city.sinhalaName}}</td>
+                            <td class='city_eng'>{{city.englishName}}</td>
                             <td id="actions">
                                 <button class="btn btn-sm btn-success">
                                     <a href="{% url 'city:edit' city.pk %}">E</a>
                                 </button>
                                 <button class="btn btn-sm btn-danger delete">
-                                    <a href="">D</a>
+                                    <a href="{% url 'city:delete' city.pk %}">D</a>
                                 </button>
                             </td>
                         </tr>

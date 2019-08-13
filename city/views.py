@@ -92,7 +92,27 @@ class UpdateCity(LoginRequiredMixin, View):
 
 
 class RemoveCity(LoginRequiredMixin, View):
-    pass
+
+    def get(self, request, *args, **kwargs):
+
+        city = get_object_or_404(City, pk=kwargs.get('pk'))
+        response = city.delete()
+
+        city_name = city.englishName
+
+        # success
+        if response[0] == 1:
+            messages.success(
+                request, " {} City Removed".format(city_name)
+            )
+
+        else:
+            messages.success(
+                request,
+                "{} can't remove now, please try again later".format(city_name)
+            )
+
+        return redirect("city:home")
 
 
 class ListCity(LoginRequiredMixin, ListView):
