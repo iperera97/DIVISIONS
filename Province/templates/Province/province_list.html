@@ -37,7 +37,8 @@
                             <th>TI-Name</th>
                             <th>Actions</th>
                         </tr>
-                        {% for province in object_list %}
+                        {% if object_list %}
+                            {% for province in object_list %}
                             <tr>
                                 <td>{{province.id}}</td>
                                 <td>{{province.sinhalaName}}</td>
@@ -52,7 +53,12 @@
                                     </button>
                                 </td>
                             </tr>
-                        {% endfor %}
+                            {% endfor %}
+                        {% else %}
+                            <tr>
+                                <td colspan="5" style="text-align: center">Please Create new Province</td>
+                            </tr>
+                        {% endif %}
                     </table>
                 </div>
             </div>

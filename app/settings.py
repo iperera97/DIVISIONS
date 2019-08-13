@@ -1,5 +1,6 @@
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -29,13 +30,17 @@ INSTALLED_APPS = [
     "dashboard",
     "Province",
     "district",
-    "debug_toolbar"
-]
 
-INTERNAL_IPS = "127.0.0.1"
+    # add environment apps
+] + [app.strip() for app in os.getenv("APPLICATIONS").split(",") if app != ""]
 
-MIDDLEWARE = [
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+
+INTERNAL_IPS = os.getenv("INTERNAL_IPS")
+
+ENV_MIDDLEWARE = [middle.strip() for middle in os.getenv(
+    "MIDDLEWARE").split(",") if middle != ""]
+
+MIDDLEWARE = ENV_MIDDLEWARE + [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -122,7 +127,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, "PROENV_STATICS")
+STATIC_ROOT = os.path.join(BASE_DIR, "dist")
 
 # AUTH
 

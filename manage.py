@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 from dotenv import load_dotenv
 
-env_path = Path('.env')
+env_path = Path('.env.dev')
 load_dotenv(dotenv_path=env_path)
 
 
