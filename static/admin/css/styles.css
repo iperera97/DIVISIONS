@@ -9,7 +9,9 @@ p {
   color: #777; }
 
 a, a:hover, a:focus {
-  color: #30a5ff; }
+  color: #30a5ff;
+  text-decoration: none;
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: #444444; }
@@ -1052,3 +1054,4 @@ p.back-link {
 #sidebar-collapse .nav li {
   border: 2px solid #fff;
 }
+

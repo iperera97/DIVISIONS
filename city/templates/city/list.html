@@ -17,8 +17,31 @@
     </div>
 
     <div class="row">
+        <form method="GET" autocomplete="off" id='search-form'>
+            <div class="col-sm-12 col-md-9">
+                <div class="form-group">
+                    <input type='text' placeholder='Search city name in english' name='name' required class='form-control'/>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="form-group">
+                    <input type="submit" value="Search" class='form-control'/>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="row">
         <div class="col-sm-12">
             <div id="page-actions">
+                {% if request.GET.name %}
+                    <button class="btn btn-danger" style='background: #c53333;'>
+                        <a href="{% url 'city:home' %}" style="color: #fff">Reset Search</a>
+                    </button>
+                {% endif %} 
+
                 <button class="btn btn-primary">
                     <a href="{% url 'city:create' %}" style="color: #fff">Add new City</a>
                 </button>
@@ -26,7 +49,7 @@
         </div>
     </div>
 
-        <div class="row" style="margin-top: 20px;">
+    <div class="row" style="margin-top: 20px;">
         <div class="col-sm-12">
             <div class="panel panel-default">
                 <table class="table table-striped" id="city_table">
@@ -57,15 +80,39 @@
                         {% endfor %}
                     {% else %}
                         <tr>
+                        {% if request.GET.name %}
+                            <td colspan="5" style="text-align: center">{{request.GET.name}} not results found</td>
+                        {% else %}
                             <td colspan="5" style="text-align: center">Please Create new City</td>
+                        {% endif %}
                         </tr>
                     {% endif %}                    
                 </table>
             </div>
         </div>
 
-        
 
+        <div class="col-sm-12">
+            {% if is_paginated %}      
+            <div class="pagination">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                        <a href="?page=1">&laquo; first</a>
+                        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                    <span class="current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">next</a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+            {% endif %}
+        </div>
     </div>
 
 </div>

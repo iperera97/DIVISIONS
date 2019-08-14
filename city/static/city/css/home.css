@@ -1,3 +1,19 @@
 #city_table .btn a {
     color: #fff;
 }
+
+#page-actions {
+    text-align: right;
+}
+
+#page-actions button {
+    background: #26a872;
+    border: none;
+}
+
+
+#search-form input[type='submit'] {
+    background: #30a5ff;
+    font-size: 18px;
+    color: #fff;
+}

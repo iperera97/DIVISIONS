@@ -117,18 +117,33 @@ class RemoveCity(LoginRequiredMixin, View):
 
 class ListCity(LoginRequiredMixin, ListView):
 
-    queryset = City.objects.all()
-    queryset = queryset.select_related('district')
-    queryset = queryset.values(
-        'pk',
-        'sinhalaName',
-        'englishName',
-        'district_id',
-        'district__englishName')
-
+    paginate_by = 10
     template_name = "city/list.html"
 
     def get_context_data(self, *args, **kwargs):
         contextData = super().get_context_data(*args, **kwargs)
         contextData['title'] = 'City'
         return contextData
+
+    def get_queryset(self):
+
+        searchSinhalaName = self.request.GET.get('name')
+
+        if searchSinhalaName:
+
+            queryset = City.objects.filter(
+                englishName__icontains=searchSinhalaName.strip()
+            )
+
+        else:
+
+            queryset = City.objects.all()
+            queryset = queryset.select_related('district')
+            queryset = queryset.values(
+                'pk',
+                'sinhalaName',
+                'englishName',
+                'district__englishName')
+            queryset = queryset.order_by('pk')
+
+        return queryset
