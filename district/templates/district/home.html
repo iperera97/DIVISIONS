@@ -17,8 +17,28 @@
     </div>
 
     <div class="row">
+        <form method="GET" autocomplete="off" id='search-form'>
+            <div class="col-sm-12 col-md-9">
+                <div class="form-group">
+                    <input type='text' placeholder='Search district name in english' name='name' required class='form-control'/>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="form-group">
+                    <input type="submit" value="Search" class='form-control' style='background: #30a5ff; color: #fff' />
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
         <div class="col-sm-12">
             <div id="page-actions">
+                {% if request.GET.name %}
+                    <button class="btn btn-danger" style='background: #c53333;'>
+                        <a href="{% url 'district:home' %}" style="color: #fff">Reset Search</a>
+                    </button>
+                {% endif %} 
                 <button class="btn btn-primary">
                     <a href="{% url 'district:create' %}" style="color: #fff">Add new District</a>
                 </button>
@@ -57,7 +77,11 @@
                         {% endfor %}
                     {% else %}
                         <tr>
-                            <td colspan="5" style="text-align: center">Please Create new District</td>
+                            {% if request.GET.name %}
+                                <td colspan="5" style="text-align: center">{{request.GET.name}} not results found</td>
+                            {% else %}
+                                <td colspan="5" style="text-align: center">Please Create new City</td>
+                            {% endif %}
                         </tr>
                     {% endif %}                    
                 </table>

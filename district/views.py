@@ -17,14 +17,23 @@ class ViewDistrct(LoginRequiredMixin, View):
         }
 
         pageNumber = request.GET.get("page", 1)
+        searchName = request.GET.get('name')
 
-        querySet = District.objects.all().select_related('province').order_by('pk')
-        querySet = querySet.values(
-            'pk',
-            'sinhalaName',
-            'englishName',
-            'province',
-            'province__englishName')
+        if searchName:
+
+            querySet = District.objects.filter(
+                englishName__icontains=searchName.strip()
+            )
+
+        else:
+
+            querySet = District.objects.all().select_related('province').order_by('pk')
+            querySet = querySet.values(
+                'pk',
+                'sinhalaName',
+                'englishName',
+                'province',
+                'province__englishName')
 
         # per page number of objects
         paginator = Paginator(querySet, 8)
