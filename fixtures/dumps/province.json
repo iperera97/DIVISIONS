@@ -1,0 +1,83 @@
+[
+   {
+      "model": "Province.province",
+      "pk": "1",
+      "fields": {
+         "sinhalaName": "\u0db6\u0dc3\u0dca\u0db1\u0dcf\u0dc4\u0dd2\u0dbb",
+         "englishName": "Western",
+         "tamilName": "\u0bae\u0bc7\u0bb2\u0bcd"
+      }
+   },
+   {
+      "model": "Province.province",
+      "pk": "2",
+      "fields": {
+         "sinhalaName": "\u0db8\u0db0\u0dca\u200d\u0dba\u0db8",
+         "englishName": "Central",
+         "tamilName": "\u0bae\u0ba4\u0bcd\u0ba4\u0bbf\u0baf"
+      }
+   },
+   {
+      "model": "Province.province",
+      "pk": "3",
+      "fields": {
+         "sinhalaName": "\u0daf\u0d9a\u0dd4\u0dab\u0dd4",
+         "englishName": "Southern",
+         "tamilName": "\u0ba4\u0bc6\u0ba9\u0bcd"
+      }
+   },
+   {
+      "model": "Province.province",
+      "pk": "4",
+      "fields": {
+         "sinhalaName": "\u0dc0\u0dba\u0db9",
+         "englishName": "North Western",
+         "tamilName": "\u0bb5\u0b9f \u0bae\u0bc7\u0bb2\u0bcd"
+      }
+   },
+   {
+      "model": "Province.province",
+      "pk": "5",
+      "fields": {
+         "sinhalaName": "\u0dc3\u0db6\u0dbb\u0d9c\u0db8\u0dd4\u0dc0",
+         "englishName": "Sabaragamuwa",
+         "tamilName": "\u0b9a\u0baa\u0bb0\u0b95\u0bae\u0bc1\u0bb5"
+      }
+   },
+   {
+      "model": "Province.province",
+      "pk": "6",
+      "fields": {
+         "sinhalaName": "\u0db1\u0dd0\u0d9c\u0dd9\u0db1\u0dc4\u0dd2\u0dbb",
+         "englishName": "Eastern",
+         "tamilName": "\u0b95\u0bbf\u0bb4\u0b95\u0bcd\u0b95\u0bc1"
+      }
+   },
+   {
+      "model": "Province.province",
+      "pk": "7",
+      "fields": {
+         "sinhalaName": "\u0d8c\u0dc0",
+         "englishName": "Uva",
+         "tamilName": "\u0b8a\u0bb5\u0bbe"
+      }
+   },
+   {
+      "model": "Province.province",
+      "pk": "8",
+      "fields": {
+         "sinhalaName": "\u0d8b\u0dad\u0dd4\u0dbb\u0dd4 \u0db8\u0dd0\u0daf",
+         "englishName": "North Central",
+         "tamilName": "\u0bb5\u0b9f \u0bae\u0ba4\u0bcd\u0ba4\u0bbf\u0baf"
+      }
+   },
+   {
+      "model": "Province.province",
+      "pk": "9",
+      "fields": {
+         "sinhalaName": "\u0d8b\u0dad\u0dd4\u0dbb\u0dd4",
+         "englishName": "Northern",
+         "tamilName": "\u0bb5\u0b9f"
+      }
+   }
+]

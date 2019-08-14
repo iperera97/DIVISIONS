@@ -96,7 +96,7 @@
                                         id="id_featureImage">
                                 </div>
                             </div>
-                            <div class="col-s12 col-md-6">
+                            <div class="col-s12 col-md-8">
                                 <div class="form-group">
                                     {% showErrors form.mapUrl.errors %}
                                     <label for="{{ form.mapUrl.id_for_label }}">
@@ -105,10 +105,19 @@
                                     {{ form.mapUrl }}
                                 </div>
                             </div>
-                            <div class="col-s12 col-md-6">
+                            <div class="col-s12 col-md-4">
+                                <div class="form-group">
+                                    {% showErrors form.postal_code.errors %}
+                                    <label for="{{ form.postal_code.id_for_label }}">
+                                        Postal Code
+                                    </label>
+                                    {{ form.postal_code }}
+                                </div>
+                            </div>
+                            <div class="col-s12 col-md-4">
                                 <div data-feature-url="{{featureImage}}" id="feature-image-block"></div>
                             </div>
-                            <div class="col-s12 col-md-6">
+                            <div class="col-s12">
                                 <div class="form-group">
                                     <input 
                                         id="submit"

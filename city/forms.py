@@ -14,7 +14,8 @@ class CityInitForm(forms.ModelForm):
                   'area',
                   'district',
                   'featureImage',
-                  'mapUrl')
+                  'mapUrl',
+                  'postal_code')
 
     def __init__(self, *args, **kwargs):
 

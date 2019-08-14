@@ -142,3 +142,8 @@ LOGIN_REDIRECT_URL = "/adminpanel/dashboard/"
 # media
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# fixtures
+FIXTURE_DIRS = [
+    os.path.join(BASE_DIR, "fixtures/dumps"),
+]

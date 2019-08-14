@@ -1,0 +1,252 @@
+[
+    {
+        "model": "district.district",
+        "pk": "1",
+        "fields": {
+            "sinhalaName": "\u0d85\u0db8\u0dca\u0db4\u0dcf\u0dbb",
+            "englishName": "Ampara",
+            "tamilName": "\u0b85\u0bae\u0bcd\u0baa\u0bbe\u0bb1\u0bc8",
+            "province": "6"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "2",
+        "fields": {
+            "sinhalaName": "\u0d85\u0db1\u0dd4\u0dbb\u0dcf\u0db0\u0db4\u0dd4\u0dbb\u0dba",
+            "englishName": "Anuradhapura",
+            "tamilName": "\u0b85\u0ba9\u0bc1\u0bb0\u0bbe\u0ba4\u0baa\u0bc1\u0bb0\u0bae\u0bcd",
+            "province": "8"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "3",
+        "fields": {
+            "sinhalaName": "\u0db6\u0daf\u0dd4\u0dbd\u0dca\u0dbd",
+            "englishName": "Badulla",
+            "tamilName": "\u0baa\u0ba4\u0bc1\u0bb3\u0bc8",
+            "province": "7"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "4",
+        "fields": {
+            "sinhalaName": "\u0db8\u0da9\u0d9a\u0dbd\u0db4\u0dd4\u0dc0",
+            "englishName": "Batticaloa",
+            "tamilName": "\u0bae\u0b9f\u0bcd\u0b9f\u0b95\u0bcd\u0b95\u0bb3\u0baa\u0bcd\u0baa\u0bc1",
+            "province": "6"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "5",
+        "fields": {
+            "sinhalaName": "\u0d9a\u0ddc\u0dc5\u0db9",
+            "englishName": "Colombo",
+            "tamilName": "\u0b95\u0bca\u0bb4\u0bc1\u0bae\u0bcd\u0baa\u0bc1",
+            "province": "1"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "6",
+        "fields": {
+            "sinhalaName": "\u0d9c\u0dcf\u0dbd\u0dca\u0dbd",
+            "englishName": "Galle",
+            "tamilName": "\u0b95\u0bbe\u0bb2\u0bbf",
+            "province": "3"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "7",
+        "fields": {
+            "sinhalaName": "\u0d9c\u0db8\u0dca\u0db4\u0dc4",
+            "englishName": "Gampaha",
+            "tamilName": "\u0b95\u0bae\u0bcd\u0baa\u0bb9\u0bbe",
+            "province": "1"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "8",
+        "fields": {
+            "sinhalaName": "\u0dc4\u0db8\u0dca\u0db6\u0db1\u0dca\u0dad\u0ddc\u0da7",
+            "englishName": "Hambantota",
+            "tamilName": "\u0b85\u0bae\u0bcd\u0baa\u0bbe\u0ba8\u0bcd\u0ba4\u0bcb\u0b9f\u0bcd\u0b9f\u0bc8",
+            "province": "3"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "9",
+        "fields": {
+            "sinhalaName": "\u0dba\u0dcf\u0db4\u0db1\u0dba",
+            "englishName": "Jaffna",
+            "tamilName": "\u0baf\u0bbe\u0bb4\u0bcd\u0baa\u0bcd\u0baa\u0bbe\u0ba3\u0bae\u0bcd",
+            "province": "9"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "10",
+        "fields": {
+            "sinhalaName": "\u0d9a\u0dc5\u0dd4\u0dad\u0dbb",
+            "englishName": "Kalutara",
+            "tamilName": "\u0b95\u0bb3\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1\u0bb1\u0bc8",
+            "province": "1"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "11",
+        "fields": {
+            "sinhalaName": "\u0db8\u0dc4\u0db1\u0dd4\u0dc0\u0dbb",
+            "englishName": "Kandy",
+            "tamilName": "\u0b95\u0ba3\u0bcd\u0b9f\u0bbf",
+            "province": "2"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "12",
+        "fields": {
+            "sinhalaName": "\u0d9a\u0dd1\u0d9c\u0dbd\u0dca\u0dbd",
+            "englishName": "Kegalle",
+            "tamilName": "\u0b95\u0bc7\u0b95\u0bbe\u0bb2\u0bc8",
+            "province": "5"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "13",
+        "fields": {
+            "sinhalaName": "\u0d9a\u0dd2\u0dbd\u0dd2\u0db1\u0ddc\u0da0\u0dca\u0da0\u0dd2\u0dba",
+            "englishName": "Kilinochchi",
+            "tamilName": "\u0b95\u0bbf\u0bb3\u0bbf\u0ba8\u0bca\u0b9a\u0bcd\u0b9a\u0bbf",
+            "province": "9"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "14",
+        "fields": {
+            "sinhalaName": "\u0d9a\u0dd4\u0dbb\u0dd4\u0dab\u0dd1\u0d9c\u0dbd",
+            "englishName": "Kurunegala",
+            "tamilName": "\u0b95\u0bc1\u0bb0\u0bc1\u0ba3\u0bbe\u0b95\u0bb2\u0bcd",
+            "province": "4"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "15",
+        "fields": {
+            "sinhalaName": "\u0db8\u0db1\u0dca\u0db1\u0dcf\u0dbb\u0db8",
+            "englishName": "Mannar",
+            "tamilName": "\u0bae\u0ba9\u0bcd\u0ba9\u0bbe\u0bb0\u0bcd",
+            "province": "9"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "16",
+        "fields": {
+            "sinhalaName": "\u0db8\u0dcf\u0dad\u0dbd\u0dda",
+            "englishName": "Matale",
+            "tamilName": "\u0bae\u0bbe\u0ba4\u0bcd\u0ba4\u0bb3\u0bc8",
+            "province": "2"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "17",
+        "fields": {
+            "sinhalaName": "\u0db8\u0dcf\u0dad\u0dbb",
+            "englishName": "Matara",
+            "tamilName": "\u0bae\u0bbe\u0ba4\u0bcd\u0ba4\u0bb1\u0bc8",
+            "province": "3"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "18",
+        "fields": {
+            "sinhalaName": "\u0db8\u0ddc\u0dab\u0dbb\u0dcf\u0d9c\u0dbd",
+            "englishName": "Monaragala",
+            "tamilName": "\u0bae\u0bca\u0ba3\u0bb0\u0bbe\u0b95\u0bb2\u0bc8",
+            "province": "7"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "19",
+        "fields": {
+            "sinhalaName": "\u0db8\u0dd4\u0dbd\u0dad\u0dd2\u0dc0\u0dca",
+            "englishName": "Mullaitivu",
+            "tamilName": "\u0bae\u0bc1\u0bb2\u0bcd\u0bb2\u0bc8\u0ba4\u0bcd\u0ba4\u0bc0\u0bb5\u0bc1",
+            "province": "9"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "20",
+        "fields": {
+            "sinhalaName": "\u0db1\u0dd4\u0dc0\u0dbb \u0d91\u0dc5\u0dd2\u0dba",
+            "englishName": "Nuwara Eliya",
+            "tamilName": "\u0ba8\u0bc1\u0bb5\u0bb0\u0bc7\u0bb2\u0bbf\u0baf\u0bbe",
+            "province": "2"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "21",
+        "fields": {
+            "sinhalaName": "\u0db4\u0ddc\u0dc5\u0ddc\u0db1\u0dca\u0db1\u0dbb\u0dd4\u0dc0",
+            "englishName": "Polonnaruwa",
+            "tamilName": "\u0baa\u0bca\u0bb2\u0ba9\u0bcd\u0ba9\u0bb1\u0bc1\u0bb5\u0bc8",
+            "province": "8"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "22",
+        "fields": {
+            "sinhalaName": "\u0db4\u0dd4\u0dad\u0dca\u0dad\u0dbd\u0db8",
+            "englishName": "Puttalam",
+            "tamilName": "\u0baa\u0bc1\u0ba4\u0bcd\u0ba4\u0bb3\u0bae\u0bcd",
+            "province": "4"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "23",
+        "fields": {
+            "sinhalaName": "\u0dbb\u0dad\u0dca\u0db1\u0db4\u0dd4\u0dbb",
+            "englishName": "Ratnapura",
+            "tamilName": "\u0b87\u0bb0\u0ba4\u0bcd\u0ba4\u0bbf\u0ba9\u0baa\u0bc1\u0bb0\u0bbf",
+            "province": "5"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "24",
+        "fields": {
+            "sinhalaName": "\u0dad\u0dca\u200d\u0dbb\u0dd2\u0d9a\u0dd4\u0dab\u0dcf\u0db8\u0dbd\u0dba",
+            "englishName": "Trincomalee",
+            "tamilName": "\u0ba4\u0bbf\u0bb0\u0bc1\u0b95\u0bcb\u0ba3\u0bae\u0bb2\u0bc8",
+            "province": "6"
+        }
+    },
+    {
+        "model": "district.district",
+        "pk": "25",
+        "fields": {
+            "sinhalaName": "\u0dc0\u0dc0\u0dca\u0db1\u0dd2\u0dba\u0dcf\u0dc0",
+            "englishName": "Vavuniya",
+            "tamilName": "\u0bb5\u0bb5\u0bc1\u0ba9\u0bbf\u0baf\u0bbe",
+            "province": "9"
+        }
+    }
+]

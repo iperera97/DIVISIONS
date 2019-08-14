@@ -1,0 +1,177 @@
+[
+    {
+        "id": "1",
+        "province_id": "6",
+        "name_en": "Ampara",
+        "name_si": "\u0d85\u0db8\u0dca\u0db4\u0dcf\u0dbb",
+        "name_ta": "\u0b85\u0bae\u0bcd\u0baa\u0bbe\u0bb1\u0bc8"
+    },
+    {
+        "id": "2",
+        "province_id": "8",
+        "name_en": "Anuradhapura",
+        "name_si": "\u0d85\u0db1\u0dd4\u0dbb\u0dcf\u0db0\u0db4\u0dd4\u0dbb\u0dba",
+        "name_ta": "\u0b85\u0ba9\u0bc1\u0bb0\u0bbe\u0ba4\u0baa\u0bc1\u0bb0\u0bae\u0bcd"
+    },
+    {
+        "id": "3",
+        "province_id": "7",
+        "name_en": "Badulla",
+        "name_si": "\u0db6\u0daf\u0dd4\u0dbd\u0dca\u0dbd",
+        "name_ta": "\u0baa\u0ba4\u0bc1\u0bb3\u0bc8"
+    },
+    {
+        "id": "4",
+        "province_id": "6",
+        "name_en": "Batticaloa",
+        "name_si": "\u0db8\u0da9\u0d9a\u0dbd\u0db4\u0dd4\u0dc0",
+        "name_ta": "\u0bae\u0b9f\u0bcd\u0b9f\u0b95\u0bcd\u0b95\u0bb3\u0baa\u0bcd\u0baa\u0bc1"
+    },
+    {
+        "id": "5",
+        "province_id": "1",
+        "name_en": "Colombo",
+        "name_si": "\u0d9a\u0ddc\u0dc5\u0db9",
+        "name_ta": "\u0b95\u0bca\u0bb4\u0bc1\u0bae\u0bcd\u0baa\u0bc1"
+    },
+    {
+        "id": "6",
+        "province_id": "3",
+        "name_en": "Galle",
+        "name_si": "\u0d9c\u0dcf\u0dbd\u0dca\u0dbd",
+        "name_ta": "\u0b95\u0bbe\u0bb2\u0bbf"
+    },
+    {
+        "id": "7",
+        "province_id": "1",
+        "name_en": "Gampaha",
+        "name_si": "\u0d9c\u0db8\u0dca\u0db4\u0dc4",
+        "name_ta": "\u0b95\u0bae\u0bcd\u0baa\u0bb9\u0bbe"
+    },
+    {
+        "id": "8",
+        "province_id": "3",
+        "name_en": "Hambantota",
+        "name_si": "\u0dc4\u0db8\u0dca\u0db6\u0db1\u0dca\u0dad\u0ddc\u0da7",
+        "name_ta": "\u0b85\u0bae\u0bcd\u0baa\u0bbe\u0ba8\u0bcd\u0ba4\u0bcb\u0b9f\u0bcd\u0b9f\u0bc8"
+    },
+    {
+        "id": "9",
+        "province_id": "9",
+        "name_en": "Jaffna",
+        "name_si": "\u0dba\u0dcf\u0db4\u0db1\u0dba",
+        "name_ta": "\u0baf\u0bbe\u0bb4\u0bcd\u0baa\u0bcd\u0baa\u0bbe\u0ba3\u0bae\u0bcd"
+    },
+    {
+        "id": "10",
+        "province_id": "1",
+        "name_en": "Kalutara",
+        "name_si": "\u0d9a\u0dc5\u0dd4\u0dad\u0dbb",
+        "name_ta": "\u0b95\u0bb3\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1\u0bb1\u0bc8"
+    },
+    {
+        "id": "11",
+        "province_id": "2",
+        "name_en": "Kandy",
+        "name_si": "\u0db8\u0dc4\u0db1\u0dd4\u0dc0\u0dbb",
+        "name_ta": "\u0b95\u0ba3\u0bcd\u0b9f\u0bbf"
+    },
+    {
+        "id": "12",
+        "province_id": "5",
+        "name_en": "Kegalle",
+        "name_si": "\u0d9a\u0dd1\u0d9c\u0dbd\u0dca\u0dbd",
+        "name_ta": "\u0b95\u0bc7\u0b95\u0bbe\u0bb2\u0bc8"
+    },
+    {
+        "id": "13",
+        "province_id": "9",
+        "name_en": "Kilinochchi",
+        "name_si": "\u0d9a\u0dd2\u0dbd\u0dd2\u0db1\u0ddc\u0da0\u0dca\u0da0\u0dd2\u0dba",
+        "name_ta": "\u0b95\u0bbf\u0bb3\u0bbf\u0ba8\u0bca\u0b9a\u0bcd\u0b9a\u0bbf"
+    },
+    {
+        "id": "14",
+        "province_id": "4",
+        "name_en": "Kurunegala",
+        "name_si": "\u0d9a\u0dd4\u0dbb\u0dd4\u0dab\u0dd1\u0d9c\u0dbd",
+        "name_ta": "\u0b95\u0bc1\u0bb0\u0bc1\u0ba3\u0bbe\u0b95\u0bb2\u0bcd"
+    },
+    {
+        "id": "15",
+        "province_id": "9",
+        "name_en": "Mannar",
+        "name_si": "\u0db8\u0db1\u0dca\u0db1\u0dcf\u0dbb\u0db8",
+        "name_ta": "\u0bae\u0ba9\u0bcd\u0ba9\u0bbe\u0bb0\u0bcd"
+    },
+    {
+        "id": "16",
+        "province_id": "2",
+        "name_en": "Matale",
+        "name_si": "\u0db8\u0dcf\u0dad\u0dbd\u0dda",
+        "name_ta": "\u0bae\u0bbe\u0ba4\u0bcd\u0ba4\u0bb3\u0bc8"
+    },
+    {
+        "id": "17",
+        "province_id": "3",
+        "name_en": "Matara",
+        "name_si": "\u0db8\u0dcf\u0dad\u0dbb",
+        "name_ta": "\u0bae\u0bbe\u0ba4\u0bcd\u0ba4\u0bb1\u0bc8"
+    },
+    {
+        "id": "18",
+        "province_id": "7",
+        "name_en": "Monaragala",
+        "name_si": "\u0db8\u0ddc\u0dab\u0dbb\u0dcf\u0d9c\u0dbd",
+        "name_ta": "\u0bae\u0bca\u0ba3\u0bb0\u0bbe\u0b95\u0bb2\u0bc8"
+    },
+    {
+        "id": "19",
+        "province_id": "9",
+        "name_en": "Mullaitivu",
+        "name_si": "\u0db8\u0dd4\u0dbd\u0dad\u0dd2\u0dc0\u0dca",
+        "name_ta": "\u0bae\u0bc1\u0bb2\u0bcd\u0bb2\u0bc8\u0ba4\u0bcd\u0ba4\u0bc0\u0bb5\u0bc1"
+    },
+    {
+        "id": "20",
+        "province_id": "2",
+        "name_en": "Nuwara Eliya",
+        "name_si": "\u0db1\u0dd4\u0dc0\u0dbb \u0d91\u0dc5\u0dd2\u0dba",
+        "name_ta": "\u0ba8\u0bc1\u0bb5\u0bb0\u0bc7\u0bb2\u0bbf\u0baf\u0bbe"
+    },
+    {
+        "id": "21",
+        "province_id": "8",
+        "name_en": "Polonnaruwa",
+        "name_si": "\u0db4\u0ddc\u0dc5\u0ddc\u0db1\u0dca\u0db1\u0dbb\u0dd4\u0dc0",
+        "name_ta": "\u0baa\u0bca\u0bb2\u0ba9\u0bcd\u0ba9\u0bb1\u0bc1\u0bb5\u0bc8"
+    },
+    {
+        "id": "22",
+        "province_id": "4",
+        "name_en": "Puttalam",
+        "name_si": "\u0db4\u0dd4\u0dad\u0dca\u0dad\u0dbd\u0db8",
+        "name_ta": "\u0baa\u0bc1\u0ba4\u0bcd\u0ba4\u0bb3\u0bae\u0bcd"
+    },
+    {
+        "id": "23",
+        "province_id": "5",
+        "name_en": "Ratnapura",
+        "name_si": "\u0dbb\u0dad\u0dca\u0db1\u0db4\u0dd4\u0dbb",
+        "name_ta": "\u0b87\u0bb0\u0ba4\u0bcd\u0ba4\u0bbf\u0ba9\u0baa\u0bc1\u0bb0\u0bbf"
+    },
+    {
+        "id": "24",
+        "province_id": "6",
+        "name_en": "Trincomalee",
+        "name_si": "\u0dad\u0dca\u200d\u0dbb\u0dd2\u0d9a\u0dd4\u0dab\u0dcf\u0db8\u0dbd\u0dba",
+        "name_ta": "\u0ba4\u0bbf\u0bb0\u0bc1\u0b95\u0bcb\u0ba3\u0bae\u0bb2\u0bc8"
+    },
+    {
+        "id": "25",
+        "province_id": "9",
+        "name_en": "Vavuniya",
+        "name_si": "\u0dc0\u0dc0\u0dca\u0db1\u0dd2\u0dba\u0dcf\u0dc0",
+        "name_ta": "\u0bb5\u0bb5\u0bc1\u0ba9\u0bbf\u0baf\u0bbe"
+    }
+]
