@@ -16,6 +16,7 @@ pillow = "*"
 coverage = "*"
 django-debug-toolbar = "*"
 pylint-django = "*"
+djangorestframework = "*"
 
 [requires]
 python_version = "3.6"

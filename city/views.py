@@ -134,6 +134,12 @@ class ListCity(LoginRequiredMixin, ListView):
             queryset = City.objects.filter(
                 englishName__icontains=searchSinhalaName.strip()
             )
+            queryset = queryset.values(
+                'pk',
+                'sinhalaName',
+                'englishName',
+                'district__englishName')
+            queryset = queryset.order_by('pk')
 
         else:
 

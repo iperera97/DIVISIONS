@@ -24,6 +24,13 @@ class ViewDistrct(LoginRequiredMixin, View):
             querySet = District.objects.filter(
                 englishName__icontains=searchName.strip()
             )
+            querySet = querySet.select_related('province')
+            querySet = querySet.values(
+                'pk',
+                'sinhalaName',
+                'englishName',
+                'province',
+                'province__englishName')
 
         else:
 
