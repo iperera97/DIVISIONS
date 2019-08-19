@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     "Province",
     "district",
     "city",
+    "rest_framework",
     "api",
 
     # add environment apps
@@ -148,3 +149,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 FIXTURE_DIRS = [
     os.path.join(BASE_DIR, "fixtures/dumps"),
 ]
+
+# rest framework
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10
+}

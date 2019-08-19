@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include, re_path
 from django.conf import settings
-from django.http import HttpResponse
 from django.conf.urls.static import static
 
 urlpatterns = [
@@ -12,6 +11,7 @@ urlpatterns = [
     re_path(r'^adminpanel/provinces/', include("Province.urls")),
     re_path(r'^adminpanel/district/', include("district.urls")),
     re_path(r'^adminpanel/city/', include("city.urls")),
+    re_path(r'^api/', include("api.urls")),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
