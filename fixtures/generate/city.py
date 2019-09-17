@@ -1,6 +1,6 @@
 import json
 
-with open('../external/city.backup.json', 'r') as dumpFile:
+with open('../external/city.backup.json', 'r', encoding="utf-8") as dumpFile:
     cityJSON = json.loads(dumpFile.read())
 
 

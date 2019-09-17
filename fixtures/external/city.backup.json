@@ -13,19 +13,6 @@
     "longitude": "81.85"
   },
   {
-    "id": "2",
-    "district_id": "1",
-    "name_en": "Ambagahawatta",
-    "name_si": "අඹගහවත්ත",
-    "name_ta": null,
-    "sub_name_en": null,
-    "sub_name_si": null,
-    "sub_name_ta": null,
-    "postcode": "90326",
-    "latitude": "7.4",
-    "longitude": "81.3"
-  },
-  {
     "id": "3",
     "district_id": "1",
     "name_en": "Ampara",
@@ -426,19 +413,6 @@
     "sub_name_ta": null,
     "postcode": "32500",
     "latitude": "6.8667",
-    "longitude": "81.8333"
-  },
-  {
-    "id": "34",
-    "district_id": "1",
-    "name_en": "Sainthamaruthu",
-    "name_si": "සායින්දමරුදු",
-    "name_ta": null,
-    "sub_name_en": null,
-    "sub_name_si": null,
-    "sub_name_ta": null,
-    "postcode": "32280",
-    "latitude": "7.3833",
     "longitude": "81.8333"
   },
   {

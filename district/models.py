@@ -10,9 +10,9 @@ class District(models.Model):
         Province,
         on_delete=models.CASCADE
     )
-    sinhalaName = models.CharField(max_length=255, unique=True)
+    sinhalaName = models.CharField(max_length=255)
     englishName = models.CharField(max_length=255, unique=True)
-    tamilName = models.CharField(max_length=255, unique=True)
+    tamilName = models.CharField(max_length=255)
     area = models.CharField(max_length=255, blank=True, null=True)
     featureImage = models.ImageField(
         upload_to='images/district/',
