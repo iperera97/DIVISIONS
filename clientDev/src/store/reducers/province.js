@@ -26,7 +26,7 @@ function ProvinceReducer(state = initialState, action) {
         case FOUND_PROVINCE_LIST:
             return {
                 ...state,
-                provinces_data: [...state.provinces_data, ...action.results],
+                provinces_data: [...action.results],
                 isLoading: false,
                 status: true
             }

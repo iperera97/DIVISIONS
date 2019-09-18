@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { getProvinceList } from "../../store/actions/province"
+import Error from "../cards/error"
+import PlaceBox from "../cards/placebox"
 
 
 class ProvincesList extends Component {
@@ -14,22 +16,23 @@ class ProvincesList extends Component {
         this.props.getProvinceList()
     }
 
-    handler = () => {
-        this.setState((prevState, props) => {
-            return {
-                'counter': prevState.counter + 1
-            }
-        })
-    }
-
     render() {
-
-        console.log('state', this.props)
 
         return (
             <div className="container">
+                {!this.props.province_list_status && (<div className="row">
+                    <Error errName="Provinces Not Found" />
+                </div>)}
                 <div className="row">
-                    <p onClick={this.handler}>list goes here</p>
+                    {this.props.provinceList.map(province => {
+                        return <PlaceBox
+                            imgUrl={province.featureImage}
+                            key={province.pk}
+                            id={province.pk}
+                            englishName={province.englishName}
+                            mapUrl={province.mapUrl}
+                            divClasName="s12 m4" />
+                    })}
                 </div>
             </div>
         )
@@ -38,13 +41,15 @@ class ProvincesList extends Component {
 
 const mapStateToProps = state => {
     return {
-        "provinceList": state.provinceR.provinces_data
+        "provinceList": state.provinceR.provinces_data,
+        "province_list_status": state.provinceR.status,
+        "province_list_isLoading": state.provinceR.isLoading
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        "getProvinceList": () => dispatch(getProvinceList())
+        "getProvinceList": () => dispatch(getProvinceList()),
     }
 }
 

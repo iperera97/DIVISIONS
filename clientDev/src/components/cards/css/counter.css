@@ -1,3 +1,6 @@
+
+/* counter block start */
+
 .counter-title {
     margin: 15px 10px;
 }
@@ -21,3 +24,31 @@
     margin: 8px;
     font-size: 25px;
 }
+
+/* err block start */
+
+.err {
+    padding: 10px 0 !important;
+}
+
+.err p {
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+
+/* place box */
+.place-box .card-content {
+    padding: 5px !important;
+    background: #faebd7;
+}
+
+.place-box .card-action {
+    padding: 10px !important;
+}
+
+.place-box .card-action div {
+    display: inline-block;
+    margin: 0 10px;
+}
+

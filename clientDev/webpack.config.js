@@ -1,5 +1,7 @@
 const path = require('path');
+const webpack = require("webpack")
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 const WEBPACK_MODE = (process.env.NODE_ENV.trim() == "dev") ? "development" : "production"
 
@@ -23,6 +25,13 @@ module.exports = {
         ]
     },
 
+    plugins: [
+        new webpack.DefinePlugin({
+            MODE: JSON.stringify(WEBPACK_MODE),
+            SERVER_URL: JSON.stringify("http://localhost:8000"),
+        }),
+    ],
+
     // dev server
     devServer: {
         contentBase: path.resolve(__dirname, 'dist'),
@@ -33,6 +42,7 @@ module.exports = {
         }
     },
 
-    mode: WEBPACK_MODE
+    mode: WEBPACK_MODE,
+
 
 };

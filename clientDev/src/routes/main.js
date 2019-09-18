@@ -9,7 +9,7 @@ const MainRoute = (props) => {
     return (
         <Switch>
             <Route path={URLS.HOME} exact component={Home} />
-            <Route path={URLS.PROVINCES} component={Provinces} />
+            <Route path={URLS.PROVINCES} exact component={Provinces} />
             <Route path={URLS.DISTRICTS} component={Home} />
             <Route path={URLS.CITIES} component={Home} />
             <Route path={URLS.ABOUT_ME} component={Home} />
