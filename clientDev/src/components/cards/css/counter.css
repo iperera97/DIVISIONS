@@ -1,0 +1,23 @@
+.counter-title {
+    margin: 15px 10px;
+}
+
+.counter-parent {
+    margin-top: 10px;
+}
+
+.counter-block .card-action {
+    padding: 8px 10px !important;
+}
+
+.counter-block .card-action a {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    text-transform: capitalize;
+}
+
+.counter-block .card-action h4 {
+    margin: 8px;
+    font-size: 25px;
+}

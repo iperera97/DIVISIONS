@@ -1,0 +1,29 @@
+header nav,
+footer {
+    background-color: #01579b !important;
+    padding: 10px;
+}
+
+.main {
+    margin: 25px auto;
+}
+
+.title {
+    margin: 20px 10px;
+}
+
+h1 {
+    margin: 20px 10px;
+}
+
+h2 {
+    margin: 18px 10px;
+}
+
+h3 {
+    margin: 15px 10px;
+}
+
+h3 {
+    margin: 10px;
+}

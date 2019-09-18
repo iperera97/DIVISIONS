@@ -1,10 +1,21 @@
-import React, { Component } from "react"
+import React, { Component, Fragment } from "react"
+import Header from "./components/header/index"
+import Footer from "./components/footer/index"
+import "./assets/common.css"
+import MainRoutes from "./routes/main"
 
 export default class App extends Component {
 
     render() {
         return (
-            <h1>hello world</h1>
+            <Fragment>
+                <Header />
+
+                {/* main routes goes here */}
+                <MainRoutes />
+
+                <Footer />
+            </Fragment>
         )
     }
 }
