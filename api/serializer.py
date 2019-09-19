@@ -17,6 +17,8 @@ class ProvinceSerializer(serializers.ModelSerializer):
                   'featureImage',
                   'mapUrl')
 
+    featureImage = serializers.CharField(max_length=255, allow_blank=True)
+
 
 class RealatedProvince(serializers.ModelSerializer):
 
