@@ -4,6 +4,7 @@ import { connect } from "react-redux"
 import { getProvinceList } from "../../store/actions/province"
 import Error from "../cards/error"
 import PlaceBox from "../cards/placebox"
+import Loader from 'react-loader-spinner'
 
 
 class ProvincesList extends Component {
@@ -13,10 +14,30 @@ class ProvincesList extends Component {
     }
 
     componentDidMount() {
-        this.props.getProvinceList()
+
+        // if not has all provinces
+        if (!this.props.province_list_status) this.props.getProvinceList()
     }
 
     render() {
+
+        let listBlock = null
+
+        if (this.props.province_list_isLoading) {
+            listBlock = <div className="col s12 center">
+                <Loader type="ThreeDots" color="#01579b" height={50} width={50} />
+            </div>
+        } else {
+            listBlock = this.props.provinceList.map(province => {
+                return <PlaceBox
+                    imgUrl={province.featureImage}
+                    key={province.pk}
+                    id={province.pk}
+                    englishName={province.englishName}
+                    mapUrl={province.mapUrl}
+                    divClasName="s12 m4" />
+            })
+        }
 
         return (
             <div className="container">
@@ -24,15 +45,7 @@ class ProvincesList extends Component {
                     <Error errName="Provinces Not Found" />
                 </div>)}
                 <div className="row">
-                    {this.props.provinceList.map(province => {
-                        return <PlaceBox
-                            imgUrl={province.featureImage}
-                            key={province.pk}
-                            id={province.pk}
-                            englishName={province.englishName}
-                            mapUrl={province.mapUrl}
-                            divClasName="s12 m4" />
-                    })}
+                    {listBlock}
                 </div>
             </div>
         )

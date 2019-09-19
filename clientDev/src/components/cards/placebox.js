@@ -7,7 +7,7 @@ import slugify from "../../helpers/slugify"
 
 export default function PlaceBox(props) {
 
-    let imageURL = `${SERVER_URL}/media/${props.imgUrl}`;
+    let imgUrl = (props.imgUrl) ? `${SERVER_URL}/media/${props.imgUrl}` : `${SERVER_URL}/media/images/defaults/slplace.jpg`;
     let divClasName = `col ${props.divClasName} place-box`;
 
     let PAGE_URL = slugify(`${URLS.PROVINCES}/${props.englishName}`)
@@ -16,7 +16,7 @@ export default function PlaceBox(props) {
         <div className={divClasName}>
             <div className="card">
                 <div className="card-image waves-effect waves-block waves-light">
-                    <img className="activator" src={imageURL} style={{ width: "100%", height: "200px" }} />
+                    <img className="activator" src={imgUrl} style={{ width: "100%", height: "200px" }} />
                 </div>
                 <div className="card-content">
                     <span className="card-title center">{props.englishName}</span>
