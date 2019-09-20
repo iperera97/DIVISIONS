@@ -17,16 +17,16 @@ export function getProvinceList() {
 
         dispatch(actionGetProvince({ type: GET_PROVINCE_LIST, results: [] }))
 
-        // request the api server
-        axios.get('/api/province/list/').then(response => {
+        fetch('/api/province/list/').then(res => {
+            if (res.ok) return res.json()
+            else Promise.reject(res.status)
+        }).then(data => {
+            // success
+            dispatch(actionGetProvince({ type: FOUND_PROVINCE_LIST, results: data.results }))
 
-            let provinceList = response.data.results
-
-            // 404 data
-            if (provinceList.length == 0) dispatch(actionGetProvince({ type: NOT_FOUND_PROVINCE, results: [] }))
-            else dispatch(actionGetProvince({ type: FOUND_PROVINCE_LIST, results: provinceList }))
-
-            // if has an error
-        }).catch(err => dispatch(actionGetProvince({ type: NOT_FOUND_PROVINCE, results: [] })))
+        }).catch(err => {
+            //err
+            dispatch(actionGetProvince({ type: NOT_FOUND_PROVINCE, results: [] }))
+        })
     }
 }

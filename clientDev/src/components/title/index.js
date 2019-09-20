@@ -6,7 +6,7 @@ function Title(props) {
         <div className="container">
             <div className="row" style={{ margin: "5px 0" }}>
                 <div className="col s12">
-                    <h1 className="center title">{props.titleName}</h1>
+                    <h1 className="center title" style={{ 'textTransform': 'capitalize' }}>{props.titleName}</h1>
                 </div>
             </div>
         </div>

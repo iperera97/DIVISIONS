@@ -1,0 +1,20 @@
+#province-detail .btn-tags {
+    text-align: center;
+}
+
+#province-detail .btn-tags button {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+#province-detail #banner {
+    width: 100%;
+}
+
+#province-detail #introduction {
+    margin: 20px 0;
+}
+
+#related_distrcits li {
+    padding: 10px 10px;
+}

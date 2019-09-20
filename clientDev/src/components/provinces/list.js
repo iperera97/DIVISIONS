@@ -5,7 +5,8 @@ import { getProvinceList } from "../../store/actions/province"
 import Error from "../cards/error"
 import PlaceBox from "../cards/placebox"
 import Loader from 'react-loader-spinner'
-
+import slugify from "../../helpers/slugify"
+import URLS from "../../routes/urls"
 
 class ProvincesList extends Component {
 
@@ -29,7 +30,11 @@ class ProvincesList extends Component {
             </div>
         } else {
             listBlock = this.props.provinceList.map(province => {
+
+                let PAGE_URL = slugify(`${URLS.PROVINCES}/${province.englishName}-${province.pk}`)
+
                 return <PlaceBox
+                    pageUrl={PAGE_URL}
                     imgUrl={province.featureImage}
                     key={province.pk}
                     id={province.pk}

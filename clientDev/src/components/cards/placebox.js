@@ -2,15 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { NavLink } from "react-router-dom"
-import URLS from "../../routes/urls"
-import slugify from "../../helpers/slugify"
 
 export default function PlaceBox(props) {
 
     let imgUrl = (props.imgUrl) ? `${SERVER_URL}/media/${props.imgUrl}` : `${SERVER_URL}/media/images/defaults/slplace.jpg`;
     let divClasName = `col ${props.divClasName} place-box`;
-
-    let PAGE_URL = slugify(`${URLS.PROVINCES}/${props.englishName}`)
 
     return (
         <div className={divClasName}>
@@ -23,7 +19,7 @@ export default function PlaceBox(props) {
                 </div>
                 <div className="card-action">
                     <div>
-                        <NavLink to={PAGE_URL} className="btn light-blue darken-4">View More</NavLink>
+                        <NavLink to={props.pageUrl} className="btn light-blue darken-4">View More</NavLink>
                     </div>
                     <div className="right">
                         <a href={props.mapUrl} target="_blank">
