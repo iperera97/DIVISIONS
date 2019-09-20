@@ -10,14 +10,10 @@ import URLS from "../../routes/urls"
 
 class ProvincesList extends Component {
 
-    state = {
-        'counter': 0
-    }
-
     componentDidMount() {
 
         // if not has all provinces
-        if (!this.props.province_list_status) this.props.getProvinceList()
+        if (!this.props.province_list_status) this.props.getProvinceList(10)
     }
 
     render() {

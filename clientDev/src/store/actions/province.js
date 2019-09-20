@@ -1,5 +1,3 @@
-import axios from "axios"
-
 export const GET_PROVINCE_LIST = "GET_PROVINCE_LIST"
 export const FOUND_PROVINCE_LIST = "FOUND_PROVINCE_LIST"
 export const NOT_FOUND_PROVINCE = "NOT_FOUND_PROVINCE"
