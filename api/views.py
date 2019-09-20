@@ -16,8 +16,9 @@ class ProvinceList(ListAPIView):
                                        'englishName', 'featureImage', 'pk', 'mapUrl')
     serializer_class = ProvinceSerializer
 
-
 # province detailview
+
+
 class ProvinceDetail(RetrieveAPIView):
 
     model = Province
@@ -28,6 +29,24 @@ class ProvinceDetail(RetrieveAPIView):
 
         queryset = Province.objects.filter(pk=self.kwargs.get('id'))
         return queryset
+
+
+# get releventDistrict
+class ReleventDistrict(APIView):
+
+    def get(self, request, *args, **kwargs):
+
+        queryset = District.objects.filter(
+            province_id=kwargs.get('province_id'))
+        queryset = queryset.values(
+            'englishName', 'pk')
+
+        if queryset:
+            status = 200
+        else:
+            status = 404
+
+        return Response(queryset, status=status)
 
 
 class GetDistrict(ListAPIView):

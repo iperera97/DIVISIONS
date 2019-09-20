@@ -8,6 +8,10 @@ urlpatterns = [
             views.ProvinceList.as_view(),
             name='list-province'),
 
+    re_path(r'^province/relevet-districts/(?P<province_id>[0-9]+)/$',
+            views.ReleventDistrict.as_view(),
+            name='rel-districts'),
+
     re_path(r"province/(?P<id>[0-9]+)/$",
             views.ProvinceDetail.as_view(),
             name="detail-view"),
