@@ -7,6 +7,7 @@ from district.models import District
 from city.models import City
 
 
+# this dashboad for admin panel
 class Dashboard(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
@@ -19,4 +20,4 @@ class Dashboard(LoginRequiredMixin, View):
             'city_count': City.objects.all().count()
         }
 
-        return render(request, "dashboard/home.html", parseData)
+        return render(request, "dashboard/dashboard.html", parseData)

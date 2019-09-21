@@ -1,11 +1,15 @@
 from django.contrib import admin
-from django.urls import path, include, re_path
+from django.urls import path, include, re_path, reverse
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import homePage, redirectToDashboard
+
 
 urlpatterns = [
 
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
+    re_path(r'^$', homePage, name='home_page'),
+    re_path(r'^adminpanel/$', redirectToDashboard),
     re_path(r'^adminpanel/auth/', include("user.urls")),
     re_path(r'^adminpanel/dashboard/', include("dashboard.urls")),
     re_path(r'^adminpanel/provinces/', include("Province.urls")),
@@ -23,3 +27,6 @@ if settings.DEBUG:
         path('__debug__/', include(debug_toolbar.urls)),
 
     ] + urlpatterns
+
+handler404 = 'app.views.handle404'
+handler500 = 'app.views.handle500'
