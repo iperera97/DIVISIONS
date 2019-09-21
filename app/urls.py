@@ -6,8 +6,6 @@ from .views import homePage, redirectToDashboard
 
 
 urlpatterns = [
-
-    #path('admin/', admin.site.urls),
     re_path(r'^$', homePage, name='home_page'),
     re_path(r'^adminpanel/$', redirectToDashboard),
     re_path(r'^adminpanel/auth/', include("user.urls")),
