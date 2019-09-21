@@ -20,7 +20,19 @@ class ProvinceSerializer(serializers.ModelSerializer):
     featureImage = serializers.CharField(max_length=255, allow_blank=True)
 
 
+# province serialzer by district
+class RelatedProvinceSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Province
+        fields = ('pk',
+                  'englishName',)
+
+
 class DistrictSerializer(serializers.ModelSerializer):
+
+    province = RelatedProvinceSerializer()
+    featureImage = serializers.CharField(max_length=255, allow_blank=True)
 
     class Meta:
         model = District
@@ -33,9 +45,6 @@ class DistrictSerializer(serializers.ModelSerializer):
                   'area',
                   'featureImage',
                   'mapUrl')
-
-    featureImage = serializers.CharField(max_length=255, allow_blank=True)
-    province = serializers.PrimaryKeyRelatedField(read_only=True)
 
 
 class CitySerializers(serializers.ModelSerializer):
