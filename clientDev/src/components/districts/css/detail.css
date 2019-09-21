@@ -1,0 +1,16 @@
+#district-detail .btn-tags {
+    text-align: center;
+}
+
+#district-detail .btn-tags button {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+#district-detail #banner {
+    width: 100%;
+}
+
+#district-detail #introduction {
+    margin: 20px 0;
+}

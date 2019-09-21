@@ -4,6 +4,7 @@ import Home from "../components/home/index"
 import ProvinceList from "../components/provinces/index"
 import ProvinceDetail from "../components/provinces/detail"
 import DistrictList from "../components/districts/index"
+import DistrictDetail from "../components/districts/detail"
 import URLS from "./urls"
 
 
@@ -17,7 +18,7 @@ const MainRoute = (props) => {
             <Route path={URLS.ABOUT_ME} component={Home} />
 
             <Route path={`${URLS.PROVINCES}/:province_en`} component={ProvinceDetail} />
-
+            <Route path={`${URLS.DISTRICTS}/:district_en`} component={DistrictDetail} />
         </Switch>
     )
 }

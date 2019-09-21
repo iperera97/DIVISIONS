@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react"
 import Title from "../title/index"
 import { Redirect } from "react-router-dom"
-import { BtnTags } from "./tags"
+import { BtnTags } from "../cards/tags"
 import DetailInfo from "./detail-info"
 import Loader from "react-loader-spinner"
 import DistrictLinks from "../cards/placelinks"
@@ -101,6 +101,7 @@ export default class ProvinceDetail extends Component {
                 { 'key': '2', 'name': 'english name', 'value': this.state.data_province.englishName, 'color': 'light-blue' },
                 { 'key': '3', 'name': 'tamil Name', 'value': this.state.data_province.tamilName, 'color': 'green' },
                 { 'key': '4', 'name': 'area', 'value': this.state.data_province.area, 'color': 'indigo' },
+                { 'key': '6', 'name': 'Google Map', 'href': this.state.data_province.mapUrl, 'color': 'indigo', hasIcon: true },
             ]
 
             image = this.state.data_province.featureImage
