@@ -10,12 +10,14 @@ function Provinces(props) {
         <Fragment>
             {/* title goes here */}
             <Title titleName="Provinces" />
+
             {/* search box goes here */}
             {props.data_load_status && <SearchBox
                 findTitle="Search Province"
                 data_source={props.data_source}
                 data_load_status={props.data_load_status}
                 parentUrl="provinces" />}
+
             {/* province list goes here */}
             <ProvinceList />
         </Fragment>

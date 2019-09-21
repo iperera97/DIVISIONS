@@ -36,6 +36,7 @@ class SearchBox extends React.Component {
 
         this.searchInstance = M.Autocomplete.init(elem, {
             data: this.search_source.textOnly,
+            minLength: 2,
             onAutocomplete: (val) => {
 
                 let textWithHref = this.search_source.textWithHref
@@ -50,12 +51,52 @@ class SearchBox extends React.Component {
     }
 
     getSearchInput = (event) => {
-        //console.log(this.searchInstance)
+        // has type value
+        let typedValue = event.target.value
+
+        // check has data on redux
+        let hasValues = Object.keys(this.search_source.textOnly).filter(eachValue => {
+
+            let lowerEachVal = eachValue.toLocaleLowerCase();
+            let lowerTypedVale = typedValue.toLocaleLowerCase()
+
+            if (lowerEachVal.includes(lowerTypedVale)) return true
+            else return false
+        })
+
+        // if redux doesnt hav values => request data
+        if (hasValues.length == 0) {
+
+            fetch(`${this.props.endpoint}?englishName=${typedValue}`).then(res => {
+                if (res.ok) return res.json()
+                else return Promise.reject(res.statusText)
+
+                // success
+            }).then(data => {
+
+                let textOnly = {}
+                let textWithHref = {}
+
+                data.map(eachData => {
+
+                    textOnly[eachData.englishName] = null
+                    textWithHref[eachData.englishName] = slugify(`${this.props.parentUrl}/${eachData.englishName}-${eachData.pk}`)
+                })
+
+                // set property
+                this.search_source = {
+                    textOnly,
+                    textWithHref
+                }
+
+                // update data clips
+                this.searchInstance.updateData(textOnly)
+
+            }).catch(err => console.log(err))
+        }
     }
 
     render() {
-
-        console.log('render', this.props.data_load_status)
 
         return (
             <div className="container" id="search-box">
@@ -68,7 +109,8 @@ class SearchBox extends React.Component {
                                 id="searchbox"
                                 className="autocomplete"
                                 onKeyUp={this.getSearchInput}
-                                placeholder={this.props.findTitle} />
+                                placeholder={this.props.findTitle}
+                                autoComplete="off" />
                         </div>
                     </div>
                 </div>
@@ -79,7 +121,6 @@ class SearchBox extends React.Component {
 
 SearchBox.propTypes = {
     findTitle: PropTypes.string.isRequired,
-    data_source: PropTypes.shape.isRequired,
     data_load_status: PropTypes.bool.isRequired,
     parentUrl: PropTypes.string.isRequired
 }
