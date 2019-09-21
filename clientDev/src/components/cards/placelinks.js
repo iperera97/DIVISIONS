@@ -18,9 +18,7 @@ export default function PlaceLInks(props) {
 
                     return (
                         <li key={link.pk} className="collection-item center">
-                            <button className="btn btn-small blue-grey">
-                                <NavLink className="white-text" to={url}>{link.englishName}</NavLink>
-                            </button>
+                            <NavLink className="white-text btn btn-small blue-grey " to={url}>{link.englishName}</NavLink>
                         </li>
                     )
                 })}

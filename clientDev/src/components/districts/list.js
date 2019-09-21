@@ -60,28 +60,30 @@ class DistrictList extends React.Component {
                     id={district.pk}
                     englishName={district.englishName}
                     mapUrl={district.mapUrl}
-                    divClasName="s12 m4" />
+                    divClasName="s12 m6 l4" />
             })
         }
 
         return (
-            <div className="container">
-                {!this.props.district_iist_status && (<div className="row">
+            <div className="container" id="district_list">
+                {(!this.props.district_iist_status && !this.props.district_list_isLoading) && (<div className="row">
                     <Error errName="Districts Not Found" />
                 </div>)}
                 <div className="row">
                     {listBlock}
                 </div>
                 <div className="row">
-                    <Pagination
-                        innerClass="pagination right"
-                        activeClass="teal"
-                        activeLinkClass="white-text"
-                        activePage={this.state.activePage}
-                        itemsCountPerPage={this.props.district_list_pagination.limit}
-                        totalItemsCount={this.props.district_list_pagination.count}
-                        onChange={this.handlePageChange}
-                    />
+                    <div className="col s12">
+                        {(this.props.district_iist_status) && <Pagination
+                            innerClass="pagination"
+                            activeClass="teal"
+                            activeLinkClass="white-text"
+                            activePage={this.state.activePage}
+                            itemsCountPerPage={this.props.district_list_pagination.limit}
+                            totalItemsCount={this.props.district_list_pagination.count}
+                            onChange={this.handlePageChange}
+                        />}
+                    </div>
                 </div>
             </div>
         )

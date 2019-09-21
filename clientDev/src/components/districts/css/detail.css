@@ -14,3 +14,8 @@
 #district-detail #introduction {
     margin: 20px 0;
 }
+
+
+#district_list .pagination {
+    text-align: right;
+}

@@ -72,18 +72,18 @@ export default class DistrictDetails extends Component {
             let provinceID = this.state.data_district.province.pk;
 
             btnTagData = [
-                { 'key': '1', 'name': 'sinhala name', 'value': this.state.data_district.sinhalaName, 'color': 'cyan' },
-                { 'key': '2', 'name': 'english name', 'value': this.state.data_district.englishName, 'color': 'light-blue' },
-                { 'key': '3', 'name': 'tamil Name', 'value': this.state.data_district.tamilName, 'color': 'green' },
-                { 'key': '4', 'name': 'area', 'value': this.state.data_district.area, 'color': 'indigo' },
+                { 'key': '1', 'name': 'sinhala name', 'value': this.state.data_district.sinhalaName, 'color': ' teal lighten-1' },
+                { 'key': '2', 'name': 'english name', 'value': this.state.data_district.englishName, 'color': 'teal lighten-1' },
+                { 'key': '3', 'name': 'tamil Name', 'value': this.state.data_district.tamilName, 'color': 'teal lighten-1' },
+                { 'key': '4', 'name': 'area', 'value': this.state.data_district.area, 'color': 'teal lighten-1' },
                 {
                     'key': '5',
                     'name': 'Province',
                     'href': slugify(`${URLS.PROVINCES}/${provinceName}-${provinceID}`),
-                    'color': 'indigo',
+                    'color': 'teal lighten-1',
                     'value': `${this.state.data_district.province.englishName} Province`
                 },
-                { 'key': '6', 'name': 'Google Map', 'href': this.state.data_district.mapUrl, 'color': 'indigo', hasIcon: true },
+                { 'key': '6', 'name': 'Google Map', 'href': this.state.data_district.mapUrl, 'color': 'teal lighten-1', hasIcon: true },
             ]
 
             image = this.state.data_district.featureImage

@@ -3,7 +3,7 @@ const URLS = {
     'PROVINCES': '/provinces',
     'DISTRICTS': '/districts',
     'CITIES': '/cities',
-    'ABOUT_ME': '/about-me'
+    'ABOUT_ME': '/about-project',
 }
 
 export default URLS

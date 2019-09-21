@@ -20,17 +20,34 @@ export function get_districtList(limit, offset) {
         }).then(data => {
             // success
 
-            dispatch({
-                type: FOUND_DISTRICT_LIST,
-                status: true,
-                data: data.results,
-                loading: true,
-                pagination: {
-                    limit: limit,
-                    count: data.count,
-                    offset: offset
-                }
-            })
+            // no data 
+            if (data.count == 0) {
+
+                dispatch({
+                    type: NOT_FOUND_DISTRICT,
+                    status: false,
+                    loading: false,
+                    pagination: {
+                        limit: 0,
+                        count: 0,
+                        offset: 0
+                    }
+                })
+
+                // has data
+            } else {
+                dispatch({
+                    type: FOUND_DISTRICT_LIST,
+                    status: true,
+                    data: data.results,
+                    loading: true,
+                    pagination: {
+                        limit: limit,
+                        count: data.count,
+                        offset: offset
+                    }
+                })
+            }
 
         }).catch(err => {
 

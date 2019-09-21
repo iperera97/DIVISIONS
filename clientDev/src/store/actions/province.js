@@ -20,7 +20,11 @@ export function getProvinceList() {
             else Promise.reject(res.status)
         }).then(data => {
             // success
-            dispatch(actionGetProvince({ type: FOUND_PROVINCE_LIST, results: data.results }))
+
+            // han't data
+            if (data.count == 0) dispatch(actionGetProvince({ type: NOT_FOUND_PROVINCE, results: [] }))
+            else dispatch(actionGetProvince({ type: FOUND_PROVINCE_LIST, results: data.results }))
+
 
         }).catch(err => {
             //err

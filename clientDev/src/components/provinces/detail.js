@@ -98,10 +98,10 @@ export default class ProvinceDetail extends Component {
 
             btnTagData = [
                 { 'key': '1', 'name': 'sinhala name', 'value': this.state.data_province.sinhalaName, 'color': 'cyan' },
-                { 'key': '2', 'name': 'english name', 'value': this.state.data_province.englishName, 'color': 'light-blue' },
-                { 'key': '3', 'name': 'tamil Name', 'value': this.state.data_province.tamilName, 'color': 'green' },
-                { 'key': '4', 'name': 'area', 'value': this.state.data_province.area, 'color': 'indigo' },
-                { 'key': '6', 'name': 'Google Map', 'href': this.state.data_province.mapUrl, 'color': 'indigo', hasIcon: true },
+                { 'key': '2', 'name': 'english name', 'value': this.state.data_province.englishName, 'color': 'cyan' },
+                { 'key': '3', 'name': 'tamil Name', 'value': this.state.data_province.tamilName, 'color': 'cyan' },
+                { 'key': '4', 'name': 'area', 'value': this.state.data_province.area, 'color': 'cyan' },
+                { 'key': '6', 'name': 'Google Map', 'href': this.state.data_province.mapUrl, 'color': 'cyan', hasIcon: true },
             ]
 
             image = this.state.data_province.featureImage

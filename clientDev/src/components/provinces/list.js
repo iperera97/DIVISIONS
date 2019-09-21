@@ -36,15 +36,16 @@ class ProvincesList extends Component {
                     id={province.pk}
                     englishName={province.englishName}
                     mapUrl={province.mapUrl}
-                    divClasName="s12 m4" />
+                    divClasName="s12 m6 l4" />
             })
         }
 
         return (
             <div className="container">
-                {!this.props.province_list_status && (<div className="row">
+                {/* {!this.props.province_list_status && (<div className="row">
                     <Error errName="Provinces Not Found" />
-                </div>)}
+                </div>)} */}
+                {(this.props.province_list_status === false && this.props.province_list_isLoading == false) ? <Error errName="Provinces Not Found" /> : null}
                 <div className="row">
                     {listBlock}
                 </div>

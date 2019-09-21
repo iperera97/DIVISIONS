@@ -39,7 +39,7 @@ class Card extends React.Component {
         let startCounter = `${this.state.start} ${(this.props.more_numbers && this.state.start == this.props.number) ? "+" : ""}`
         let className = `card counter-block`
         let textColor = `${this.props.textColor}-text center counter-title`
-        let btnColor = `${this.props.textColor} center btn`
+        let btnColor = `${this.props.textColor} center btn animated zoomIn`
 
         return (
             <div className={className}>

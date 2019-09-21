@@ -10,7 +10,7 @@ export default function PlaceBox(props) {
 
     return (
         <div className={divClasName}>
-            <div className="card">
+            <div className="card animated zoomIn">
                 <div className="card-image waves-effect waves-block waves-light">
                     <img className="activator" src={imgUrl} style={{ width: "100%", height: "200px" }} />
                 </div>

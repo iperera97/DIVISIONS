@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^3.7.2",
     "axios": "^0.19.0",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",

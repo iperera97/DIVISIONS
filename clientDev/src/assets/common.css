@@ -1,7 +1,8 @@
 header nav,
 footer {
     background-color: #01579b !important;
-    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .main {
@@ -10,6 +11,18 @@ footer {
 
 .title {
     margin: 20px 10px;
+    color: #01579b;
+}
+
+.sub-title {
+    font-size: 18px;
+    margin: 15px 10px;
+    text-align: center;
+}
+
+.bold {
+    color: #01579b;
+    font-weight: 500;
 }
 
 h1 {
@@ -26,4 +39,14 @@ h3 {
 
 h3 {
     margin: 10px;
+}
+
+
+#about .collection {
+    text-align: center;    
+}
+
+#about .collection span {
+    display: inline-block;
+    margin: 2px 10px;
 }
