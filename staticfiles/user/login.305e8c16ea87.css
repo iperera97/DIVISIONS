@@ -1,0 +1,13 @@
+#loginpanel {
+  margin-top: 40px;
+  padding: 25px;
+}
+
+#loginform input {
+  display: block;
+}
+
+#loginform #submit {
+  display: block;
+  margin: 0 auto;
+}
