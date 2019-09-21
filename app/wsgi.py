@@ -12,8 +12,9 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
+
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-env_path = ROOT_DIR + "/.env.dev"
+env_path = ROOT_DIR + "/.env.prod"
 load_dotenv(dotenv_path=env_path)
 
 

@@ -28,7 +28,7 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             MODE: JSON.stringify(WEBPACK_MODE),
-            SERVER_URL: JSON.stringify("http://localhost:8000"),
+            SERVER_URL: JSON.stringify("https://sl-division.herokuapp.com"),
         }),
     ],
 
@@ -38,7 +38,7 @@ module.exports = {
         compress: true,
         port: 3000,
         proxy: {
-            '/api': 'http://localhost:8000'
+            '/api': 'https://sl-division.herokuapp.com'
         }
     },
 

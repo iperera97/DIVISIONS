@@ -1,0 +1,119 @@
+[
+    {
+        "model": "Province.province",
+        "pk": 1,
+        "fields": {
+            "introduction": "The Western Province (Sinhala: \u0db6\u0dc3\u0dca\u0db1\u0dcf\u0dc4\u0dd2\u0dbb \u0db4\u0dc5\u0dcf\u0dad Basnahira Palata; Tamil: \u0bae\u0bc7\u0bb2\u0bcd \u0bae\u0bbe\u0b95\u0bbe\u0ba3\u0bae\u0bcd Mael Maakaanam) is one of the nine provinces of Sri Lanka, the first level administrative division of the country. The provinces have existed since the 19th century but did not have any legal status until 1987 when the 13th Amendment to the Constitution of Sri Lanka established provincial councils.[4][5] The province is the most densely populated province in the country and is home to the legislative capital Sri Jayawardenepura Kotte as well to Colombo, the nation's administrative and business center.",
+            "sinhalaName": "\u0db6\u0dc3\u0dca\u0db1\u0dcf\u0dc4\u0dd2\u0dbb",
+            "englishName": "Western",
+            "tamilName": "\u0bae\u0bc7\u0bb2\u0bcd",
+            "area": "123",
+            "featureImage": "images/provinces/western.jpg",
+            "mapUrl": "https://www.google.com/maps/place/Western+Province/data=!4m2!3m1!1s0x3ae252b449969b99:0xa7c02f96941c3026?sa=X&ved=2ahUKEwjL856x7trkAhVb7XMBHeVeClIQ8gEwFXoECA8QBA"
+        }
+    },
+    {
+        "model": "Province.province",
+        "pk": 2,
+        "fields": {
+            "introduction": "The Central Province (Sinhala: \u0db8\u0db0\u0dca\u200d\u0dba\u0db8 \u0db4\u0dc5\u0dcf\u0dad Madhyama Palata, Tamil: \u0bae\u0ba4\u0bcd\u0ba4\u0bbf\u0baf \u0bae\u0bbe\u0b95\u0bbe\u0ba3\u0bae\u0bcd Madhiya Maakaanam) is one of the nine provinces of Sri Lanka, the first level administrative division of the country. (The provinces have existed since the 19th century but did not have any legal status until 1987 when the 13th Amendment to the Constitution of Sri Lanka established provincial councils.[2][3]) The Central Province is primarily in the central mountainous terrain of Sri Lanka. It is the 6th largest province by area and is home to 2.5 million people. It is bordered by North Central Province to the north, Uva Province to the east, North Western Province to the west and Sabaragamuwa Province to the south and west. The province's capital is Kandy.",
+            "sinhalaName": "\u0db8\u0db0\u0dca\u200d\u0dba\u0db8",
+            "englishName": "Central",
+            "tamilName": "\u0bae\u0ba4\u0bcd\u0ba4\u0bbf\u0baf",
+            "area": "123",
+            "featureImage": "images/provinces/download.jpg",
+            "mapUrl": "https://www.google.com/maps/place/Central+Province/data=!4m2!3m1!1s0x3ae344d7d465445d:0x7e8a7802c1e08eae?sa=X&ved=2ahUKEwigxZm57trkAhW36XMBHTUwCQ0Q8gEwHXoECA8QBA"
+        }
+    },
+    {
+        "model": "Province.province",
+        "pk": 3,
+        "fields": {
+            "introduction": "The Southern Province (Sinhala: \u0daf\u0d9a\u0dd4\u0dab\u0dd4 \u0db4\u0dc5\u0dcf\u0dad Dakunu Palata, Tamil: \u0ba4\u0bc6\u0ba9\u0bcd \u0bae\u0bbe\u0b95\u0bbe\u0ba3\u0bae\u0bcd Thaen Maakaanam) of Sri Lanka is one of the nine provinces of Sri Lanka, the first level administrative division of the country. The provinces have existed since the 19th century but did not have any legal status until 1987 when the 13th Amendment to the Constitution of Sri Lanka established provincial councils.[3][4] It is the 7th largest province by area and is home to 2.5 million people, the 3rd most populated province. The province is bordered by Sabaragamuwa Province and Uva Province to the North, Eastern Province to the Northeast, Western Province to the Northwest and the Indian Ocean to the South, West and East. The Province's capital is Galle.",
+            "sinhalaName": "\u0daf\u0d9a\u0dd4\u0dab\u0dd4",
+            "englishName": "Southern",
+            "tamilName": "\u0ba4\u0bc6\u0ba9\u0bcd",
+            "area": null,
+            "featureImage": "images/provinces/download_1.jpg",
+            "mapUrl": "https://www.google.com/maps/place/Southern+Province/@6.2480961,79.7259136,8z/data=!3m1!4b1!4m5!3m4!1s0x3ae173bad9013377:0x44238fe850f6f47e!8m2!3d6.237375!4d80.543845"
+        }
+    },
+    {
+        "model": "Province.province",
+        "pk": 4,
+        "fields": {
+            "introduction": "North Western Province (Sinhala: \u0dc0\u0dba\u0db9 \u0db4\u0dc5\u0dcf\u0dad Wayamba Palata, Tamil: \u0bb5\u0b9f \u0bae\u0bc7\u0bb2\u0bcd \u0bae\u0bbe\u0b95\u0bbe\u0ba3\u0bae\u0bcd Vada Mael Maakaanam) is a province of Sri Lanka. The districts of Kurunegala and Puttalam formulate Wayamba. Its capital is Kurunegala, which has a population of 28,571. The province is known mainly for its numerous coconut plantations. Other main towns in this province are Chilaw (24,712) and Puttalam (45,661), which are both small fishing towns. The majority of the population of Wayamba province is of Sinhalese ethnicity. There is also a substantial Sri Lankan Moor minority around Puttalam and Sri Lankan Tamils in Udappu and Munneswaram. Fishing, prawn farming and rubber tree plantations are other prominent industries of the region. The province has an area of 7,888 km\u00b2, and a population of 2,370,075 (2011 census).",
+            "sinhalaName": "\u0dc0\u0dba\u0db9",
+            "englishName": "North Western",
+            "tamilName": "\u0bb5\u0b9f \u0bae\u0bc7\u0bb2\u0bcd",
+            "area": null,
+            "featureImage": "images/provinces/north.jpg",
+            "mapUrl": "https://www.google.com/maps/place/North+Western+Province/@7.9118123,79.5747437,9z/data=!3m1!4b1!4m5!3m4!1s0x3ae33a1dda4696fd:0x845d62e148814fe8!8m2!3d7.7584091!4d80.1875065"
+        }
+    },
+    {
+        "model": "Province.province",
+        "pk": 5,
+        "fields": {
+            "introduction": "The Sabaragamuwa Province, (Sinhala: \u0dc3\u0db6\u0dbb\u0d9c\u0db8\u0dd4\u0dc0 \u0db4\u0dc5\u0dcf\u0dad Sabaragamuwa Palata, Tamil: \u0b9a\u0baa\u0bb0\u0b95\u0bae\u0bc1\u0bb5 \u0bae\u0bbe\u0b95\u0bbe\u0ba3\u0bae\u0bcd Sabaragamuwa Maakaanam) is one of the nine provinces of Sri Lanka, the first level administrative division of the country. The provinces have existed since the 19th century but did not have any legal status until 1987 when the 13th Amendment to the Constitution of Sri Lanka established provincial councils.[2][3] The Sabaragamuwa Province contains two districts: Ratnapura and Kegalle. It is named after its former indigenous inhabitants, namely the Sabara, an indic term for hunter-gatherer tribes, a term seldom used in ancient Sri Lanka. Sabaragamuwa University is in Belihuloya.",
+            "sinhalaName": "\u0dc3\u0db6\u0dbb\u0d9c\u0db8\u0dd4\u0dc0",
+            "englishName": "Sabaragamuwa",
+            "tamilName": "\u0b9a\u0baa\u0bb0\u0b95\u0bae\u0bc1\u0bb5",
+            "area": null,
+            "featureImage": "images/provinces/2018-10-11.jpg",
+            "mapUrl": "https://www.google.com/maps/place/Sabaragamuwa+Province/data=!4m2!3m1!1s0x3ae316ac26047fc1:0x74876cdd719ffca5?sa=X&ved=2ahUKEwjAv9uuk9vkAhWDfn0KHVtjDdIQ8gEwHHoECA0QBA"
+        }
+    },
+    {
+        "model": "Province.province",
+        "pk": 6,
+        "fields": {
+            "introduction": "The Eastern Province (Tamil: \u0b95\u0bbf\u0bb4\u0b95\u0bcd\u0b95\u0bc1 \u0bae\u0bbe\u0b95\u0bbe\u0ba3\u0bae\u0bcd Kil\u032eakku M\u0101k\u0101\u1e47am; Sinhala: \u0db1\u0dd0\u0d9c\u0dd9\u0db1\u0dc4\u0dd2\u0dbb \u0db4\u0dc5\u0dcf\u0dad N\u00e6\u0306g\u0115nahira Pa\u1e37\u0101ta) is one of the nine provinces of Sri Lanka, the first level administrative division of the country. The provinces have existed since the 19th century but did not have any legal status until 1987 when the 13th Amendment to the Constitution of Sri Lanka established provincial councils.[4][5] Between 1988 and 2006 the province was temporarily merged with the Northern Province to form the North Eastern Province. The capital of the province is Trincomalee.",
+            "sinhalaName": "\u0db1\u0dd0\u0d9c\u0dd9\u0db1\u0dc4\u0dd2\u0dbb",
+            "englishName": "Eastern",
+            "tamilName": "\u0b95\u0bbf\u0bb4\u0b95\u0bcd\u0b95\u0bc1",
+            "area": null,
+            "featureImage": "images/provinces/esatern.jpg",
+            "mapUrl": "https://www.google.com/maps/place/Eastern+Province/data=!4m2!3m1!1s0x3afbfbbd1055942d:0x783ebf0b381408bd?sa=X&ved=2ahUKEwiItenAk9vkAhWUfCsKHWBsB7oQ8gEwHnoECAoQBA"
+        }
+    },
+    {
+        "model": "Province.province",
+        "pk": 7,
+        "fields": {
+            "introduction": "Uva Province (Sinhala: \u0d8c\u0dc0 \u0db4\u0dc5\u0dcf\u0dad Uva Palata, Tamil: \u0b8a\u0bb5\u0bbe \u0bae\u0bbe\u0b95\u0bbe\u0ba3\u0bae\u0bcd Uva Maakaanam) is Sri Lanka's second least populated province, with 1,259,880 people, created in 1896. It consists of two districts: Badulla and Moneragala. The provincial capital is Badulla. Uva is bordered by Eastern, Southern and Central provinces. Its major tourist attractions are Dunhinda falls, Diyaluma Falls, Rawana Falls, the Yala National Park (lying partly in the Southern and Eastern Provinces) and Gal Oya National Park (lying partly in the Eastern Province). The Gal Oya hills and the Central mountains are the main uplands, while the Mahaweli (Sinhalese: great-sandy) and Menik (Sinhalese: gemstone) rivers and the huge Senanayake Samudraya and Maduru Oya Reservoirs are the major waterways.",
+            "sinhalaName": "\u0d8c\u0dc0",
+            "englishName": "Uva",
+            "tamilName": "\u0b8a\u0bb5\u0bbe",
+            "area": null,
+            "featureImage": "images/provinces/uvaprovince.jpg",
+            "mapUrl": "https://www.google.com/maps/place/Uva+Province/data=!4m2!3m1!1s0x3ae4623e4bd94c8b:0xeedc5d56edcdbc88?sa=X&ved=2ahUKEwiOwYznk9vkAhXPXisKHbJkA6UQ8gEwFXoECAwQBA"
+        }
+    },
+    {
+        "model": "Province.province",
+        "pk": 8,
+        "fields": {
+            "introduction": "North Central Province (Sinhala: \u0d8b\u0dad\u0dd4\u0dbb\u0dd4 \u0db8\u0dd0\u0daf \u0db4\u0dc5\u0dcf\u0dad Uturumeda Palata, Tamil: \u0bb5\u0b9f \u0bae\u0ba4\u0bcd\u0ba4\u0bbf\u0baf \u0bae\u0bbe\u0b95\u0bbe\u0ba3\u0bae\u0bcd Wada Maththiya Maakaanam) is a province of Sri Lanka. Its capital is Anuradhapura. The province is not densely populated, and it has a weak economy as the land tends to be dry tropical woodlands. Maithripala Sirisena, the Sri Lankan president, hails from the North Central Province.",
+            "sinhalaName": "\u0d8b\u0dad\u0dd4\u0dbb\u0dd4 \u0db8\u0dd0\u0daf",
+            "englishName": "North Central",
+            "tamilName": "\u0bb5\u0b9f \u0bae\u0ba4\u0bcd\u0ba4\u0bbf\u0baf",
+            "area": null,
+            "featureImage": "images/provinces/north_ntxBYjC.jpg",
+            "mapUrl": "https://www.google.com/maps/place/North+Central+Province/data=!4m2!3m1!1s0x3afc8614170f6185:0x59787d0e74035e64?sa=X&ved=2ahUKEwjr59CJlNvkAhWBXSsKHXpqC_oQ8gEwE3oECA4QBA"
+        }
+    },
+    {
+        "model": "Province.province",
+        "pk": 9,
+        "fields": {
+            "introduction": "The Northern Province (Tamil: \u0bb5\u0b9f \u0bae\u0bbe\u0b95\u0bbe\u0ba3\u0bae\u0bcd Va\u1e6da M\u0101k\u0101\u1e47am; Sinhala: \u0d8b\u0dad\u0dd4\u0dbb\u0dd4 \u0db4\u0dc5\u0dcf\u0dad Uturu Pa\u1e37\u0101ta) is one of the nine provinces of Sri Lanka, the first level administrative division of the country. The provinces have existed since the 19th century but did not have any legal status until 1987 when the 13th Amendment to the Constitution of Sri Lanka established provincial councils.[4][5] Between 1988 and 2006 the province was temporarily merged with the Eastern Province to form the North Eastern Province. The capital of the province is Jaffna. The majority of the Sri Lankan Civil War was played out in this province.",
+            "sinhalaName": "\u0d8b\u0dad\u0dd4\u0dbb\u0dd4",
+            "englishName": "Northern",
+            "tamilName": "\u0bb5\u0b9f",
+            "area": null,
+            "featureImage": "",
+            "mapUrl": "https://www.google.com/maps/place/Northern+Province/@9.1787383,79.7469754,9z/data=!4m5!3m4!1s0x3afdb5e45096324b:0x7dd583a640795aa4!8m2!3d8.8855027!4d80.2767327"
+        }
+    }
+]
