@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from .serializer import (
     ProvinceSerializer, Province,
@@ -68,6 +69,17 @@ class DistrictDetail(RetrieveAPIView):
 
         queryset = District.objects.filter(pk=self.kwargs.get('id'))
         return queryset
+
+
+class FindDistrict(APIView):
+
+    def get(self, request, *args, **kwargs):
+        searchValue = request.GET.get('englishName')
+        queryset = District.objects.filter(
+            englishName__istartswith=searchValue)
+
+        queryset = queryset.values('englishName', 'pk')
+        return Response(queryset)
 
 
 class GetCity(ListAPIView):
