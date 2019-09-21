@@ -44,8 +44,6 @@ class DistrictList extends React.Component {
 
         let listBlock = null
 
-        console.log('loading', this.props.district_list_isLoading)
-
         if (this.props.district_list_isLoading) {
             listBlock = <div className="col s12 center">
                 <Loader type="ThreeDots" color="#01579b" height={100} width={100} />

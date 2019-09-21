@@ -57,6 +57,7 @@ export default class DistrictDetails extends Component {
 
     render() {
 
+
         let btnTagData = []
         let image = ""
 
