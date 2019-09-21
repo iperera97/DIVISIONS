@@ -144,7 +144,7 @@ class EditDistrict(LoginRequiredMixin, View):
         return render(request, 'district/edit.html', self.PARSE_DATA)
 
 
-class RemoveDistrict(View):
+class RemoveDistrict(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
 

@@ -8,5 +8,8 @@ urlpatterns = [
     re_path(r'^login/$',
             LoginView.as_view(template_name="user/login.html"),
             name="login"),
-    re_path(r'^create/$', views.CreateUser.as_view(), name="create")
+
+    re_path(r'^logout/$',
+            views.logoutUser,
+            name="logout")
 ]

@@ -5,6 +5,6 @@ const IMAGE_URL = `/media/${FEATURE_IMAGE_BLOCK.data('feature-url')}`;
 // create new image
 let featureIMG = $("<img>");
 featureIMG.attr('src', IMAGE_URL)
-featureIMG.css({ 'width': '100%' })
+featureIMG.css({ 'width': '300px' })
 
 FEATURE_IMAGE_BLOCK.append(featureIMG)

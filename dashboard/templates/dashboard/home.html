@@ -1,1 +1,32 @@
 {% extends "admin/base.html" %}
+
+{% block MainContainer %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <div class="panel panel-default bg-secondary" style="min-height: 200px; background: #17a2b8">
+                <div class="panel-body">
+                    <h1 class="text-center" style="color: #fff">{{province_count}}</h1>
+                    <h2 class="text-center" style="color: #fff">Province</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="panel panel-default" style="min-height: 200px; background: #00796b;">
+                <div class="panel-body">
+                    <h1 class="text-center" style="color: #fff">{{district_count}}</h1>
+                    <h2 class="text-center" style="color: #fff">Districts</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="panel panel-default" style="min-height: 200px; background: #03a9f4">
+                <div class="panel-body">
+                    <h1 class="text-center" style="color: #fff">{{city_count}}</h1>
+                    <h2 class="text-center" style="color: #fff">City</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

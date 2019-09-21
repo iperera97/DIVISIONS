@@ -86,7 +86,7 @@ class GetCity(ListAPIView):
 
     serializer_class = CitySerializers
 
-    def get_queryset(self, request, *args, **kwargs):
+    def get_queryset(self, *args, **kwargs):
 
         queryset = City.objects.all()
         queryset = queryset.select_related('district')

@@ -1,4 +1,10 @@
-#city_table .btn a {
+#city_table .btn {
+    color: #fff;
+    padding: 0;
+}
+
+#city_table #actions a {
+    padding: 15px;
     color: #fff;
 }
 

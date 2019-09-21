@@ -1,17 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
 from django.http import HttpResponse
+from django.contrib.auth import logout
 
 
-class LoginUser(View):
+def logoutUser(request):
 
-    def get(self, request, *args, **kwargs):
-
-        return render(request, 'user/login.html')
-
-
-class CreateUser(View):
-
-    def get(self, request, *args, **kwargs):
-
-        return HttpResponse("Create page")
+    logout(request)
+    return redirect('user:login')

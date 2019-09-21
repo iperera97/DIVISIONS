@@ -15,6 +15,12 @@
     cursor: pointer;
 }
 
+#province_table #actions button {
+    padding: 0;
+}   
+
+
 #province_table #actions a {
     color: #fff;
+    padding: 15px;
 }
