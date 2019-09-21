@@ -34,6 +34,9 @@ class DistrictSerializer(serializers.ModelSerializer):
                   'featureImage',
                   'mapUrl')
 
+    featureImage = serializers.CharField(max_length=255, allow_blank=True)
+    province = serializers.PrimaryKeyRelatedField(read_only=True)
+
 
 class CitySerializers(serializers.ModelSerializer):
 
