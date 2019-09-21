@@ -24,6 +24,10 @@ urlpatterns = [
             views.DistrictDetail.as_view(),
             name="detail-view"),
 
+    re_path(r"district/find/$",
+            views.FindDistrict.as_view(),
+            name="detail-view"),
+
     re_path(r'^city/list/$',
             views.GetCity.as_view(),
             name='list-city'),
