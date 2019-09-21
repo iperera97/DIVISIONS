@@ -30,6 +30,7 @@ export default function Header(props) {
                         <li><NavLink to={URLS.PROVINCES}>PROVINCES</NavLink></li>
                         <li><NavLink to={URLS.DISTRICTS}>DISTRICTS</NavLink></li>
                         <li><NavLink to={URLS.ABOUT_ME}>ABOUT PROJECT</NavLink></li>
+                        <li><a className="btn light-blue accent-3" href={URLS.ADMIN}>ADMIN PANEL</a></li>
                     </ul>
                 </div>
             </nav>

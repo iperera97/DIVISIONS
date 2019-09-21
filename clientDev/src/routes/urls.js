@@ -4,6 +4,7 @@ const URLS = {
     'DISTRICTS': '/districts',
     'CITIES': '/cities',
     'ABOUT_ME': '/about-project',
+    'ADMIN': '/adminpanel'
 }
 
 export default URLS

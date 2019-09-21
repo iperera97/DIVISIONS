@@ -6,6 +6,7 @@ import ProvinceDetail from "../components/provinces/detail"
 import DistrictList from "../components/districts/index"
 import DistrictDetail from "../components/districts/detail"
 import About from "../components/about/index"
+import Page404 from "../components/errPages/404"
 import URLS from "./urls"
 
 
@@ -19,6 +20,8 @@ const MainRoute = (props) => {
 
             <Route path={`${URLS.PROVINCES}/:province_en`} component={ProvinceDetail} />
             <Route path={`${URLS.DISTRICTS}/:district_en`} component={DistrictDetail} />
+
+            <Route component={Page404} />
         </Switch>
     )
 }
