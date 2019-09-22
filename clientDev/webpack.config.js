@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const WEBPACK_MODE = (process.env.NODE_ENV.trim() == "dev") ? "development" : "production"
 
+
 // init config
 module.exports = {
 
@@ -28,7 +29,7 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             MODE: JSON.stringify(WEBPACK_MODE),
-            SERVER_URL: JSON.stringify("https://sl-division.herokuapp.com"),
+            SERVER_URL: JSON.stringify(""),
         }),
     ],
 
