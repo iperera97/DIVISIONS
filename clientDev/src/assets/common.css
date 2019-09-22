@@ -10,8 +10,9 @@ footer {
 }
 
 .title {
-    margin: 20px 10px;
+    margin: 15px 10px;
     color: #01579b;
+    font-size: 2.5em;
 }
 
 .sub-title {

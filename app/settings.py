@@ -12,6 +12,8 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.getenv("DEBUG") == 'TRUE' else False
+#DEBUG = False
+
 
 ALLOWED_HOSTS = [os.getenv("ALLOW_HOST")]
 
@@ -45,7 +47,6 @@ ENV_MIDDLEWARE = [middle.strip() for middle in os.getenv(
     "MIDDLEWARE").split(",") if middle != ""]
 
 MIDDLEWARE = ENV_MIDDLEWARE + [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["templates"],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,22 +80,22 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'HOST': os.getenv("DATABASE_HOST"),
-#         'NAME': os.getenv("DATABASE_NAME"),
-#         'USER': os.getenv("DATABASE_USER"),
-#         'PASSWORD': os.getenv("DATABASE_PASSWORD"),
-#     }
-# }
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'sldivision',
-    }
-}
+     'default': {
+         'ENGINE': 'django.db.backends.mysql',
+         'HOST': os.getenv("DATABASE_HOST"),
+         'NAME': os.getenv("DATABASE_NAME"),
+         'USER': os.getenv("DATABASE_USER"),
+         'PASSWORD': os.getenv("DATABASE_PASSWORD"),
+     }
+ }
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': 'sldivision',
+#    }
+#}
 
 
 # Password validation

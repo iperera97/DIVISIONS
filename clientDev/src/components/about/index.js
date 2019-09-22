@@ -21,10 +21,6 @@ export default (props) => {
                             <span>Backend Side</span>
                             <span className="btn teal">Django &amp; RestFramework</span>
                         </li>
-                        <li className="collection-item">
-                            <span>Deployment Platform</span>
-                            <span className="btn deep-purple">Heroku</span>
-                        </li>
                     </ul>
                 </div>
                 <div className="col s12 m2"></div>
@@ -49,15 +45,6 @@ export default (props) => {
                                     target="_blank"
                                     href="mailto:isurumahesh97@gmail.com"
                                     className="white-text">isurumahesh97@gmail.com</a>
-                            </span>
-                        </li>
-                        <li className="collection-item">
-                            <span>Admin Panel</span>
-                            <span className="btn blue-grey">
-                                <a
-                                    target="_blank"
-                                    href="/admin"
-                                    className="white-text">Admin panel</a>
                             </span>
                         </li>
                     </ul>
