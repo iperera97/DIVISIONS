@@ -6,7 +6,7 @@
   "scripts": {
     "webpack": "NODE_ENV=dev webpack",
     "dev": "NODE_ENV=dev webpack-dev-server",
-    "prod": "NODE_ENV=prod webpack"
+    "build": "NODE_ENV=prod webpack"
   },
   "keywords": [],
   "author": "",

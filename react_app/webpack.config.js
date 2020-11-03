@@ -2,9 +2,7 @@ const path = require('path');
 const webpack = require("webpack")
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 const WEBPACK_MODE = (process.env.NODE_ENV.trim() == "dev") ? "development" : "production"
-
 
 // init config
 module.exports = {
@@ -39,7 +37,7 @@ module.exports = {
         compress: true,
         port: 3000,
         proxy: {
-            '/api': 'https://sl-division.herokuapp.com'
+            '/api': 'http://localhost'
         }
     },
 
