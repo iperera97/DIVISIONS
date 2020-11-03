@@ -10,7 +10,8 @@
 
 ### backend development
 ```
-    pipenv sync
+    pipenv shell  # activate virtualenvironment
+    pipenv sync  # install all packages from lock file
     python manage.py runserver  # running on port 8000
 ```
 
