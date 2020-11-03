@@ -10,15 +10,15 @@
 
 ### backend development
 ```
-    pipenv shell  # activate virtualenvironment
-    pipenv sync  # install all packages from lock file
-    python manage.py runserver  # running on port 8000
+    pipenv shell
+    pipenv sync
+    python manage.py runserver
 ```
 
 ### fronend development
 ```
     npm install
-    npm run dev  # running devserver on port 3000
+    npm run dev
     npm run build  # build project with production environment
 ```
 
