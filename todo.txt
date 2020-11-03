@@ -1,1 +1,0 @@
-db - CREATE DATABASE my_database CHARACTER SET utf8;

@@ -1,6 +1,5 @@
 import os
 
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -8,14 +7,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = "sadsad425sak/5^%$^*%!#$!@1213214$#!@"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.getenv("DEBUG") == 'TRUE' else False
-#DEBUG = False
+DEBUG = True
 
-
-ALLOWED_HOSTS = [os.getenv("ALLOW_HOST")]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -29,24 +26,15 @@ INSTALLED_APPS = [
 
     # custom apps
     "user",
-    "dashboard",
     "Province",
     "district",
     "city",
     "rest_framework",
     "api",
     "django_filters",
+]
 
-    # add environment apps
-] + [app.strip() for app in os.getenv("APPLICATIONS").split(",") if app != ""]
-
-
-INTERNAL_IPS = os.getenv("INTERNAL_IPS")
-
-ENV_MIDDLEWARE = [middle.strip() for middle in os.getenv(
-    "MIDDLEWARE").split(",") if middle != ""]
-
-MIDDLEWARE = ENV_MIDDLEWARE + [
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -82,21 +70,10 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {
      'default': {
-         'ENGINE': 'django.db.backends.mysql',
-         'HOST': os.getenv("DATABASE_HOST"),
-         'NAME': os.getenv("DATABASE_NAME"),
-         'USER': os.getenv("DATABASE_USER"),
-         'PASSWORD': os.getenv("DATABASE_PASSWORD"),
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': 'division'
      }
  }
-
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': 'sldivision',
-#    }
-#}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
